@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><title>2024-05 | SUSE Documentation Style Guide | Managing documents</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><title>2024-07 | SUSE Documentation Style Guide | Managing documents</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style.css"/>
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
-<meta name="title" content="Managing documents | 2024-05"/>
+<meta name="title" content="Managing documents | 2024-07"/>
 <meta name="description" content="This section provides an overview over features of XML you can use to manage documents."/>
-<meta name="product-number" content="2024-05"/>
+<meta name="product-number" content="2024-07"/>
 <meta name="book-title" content="SUSE Documentation Style Guide"/>
 <meta name="chapter-title" content="Chapter 9. Managing documents"/>
 <meta name="tracker-url" content="https://github.com/SUSE/doc-styleguide/issues/new"/>
@@ -40,7 +40,7 @@
       }
     ],
       
-    "dateModified": "2024-05-01T00:00+02:00",
+    "dateModified": "2024-07-01T00:00+02:00",
       
     "datePublished": "2014-02-01T00:00+02:00",
       
@@ -82,182 +82,198 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft wide offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a><a href="#_bottom-pagination">Jump to page navigation: previous page [access key p]/next page [access key n]</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="index.html">SUSE Documentation Style Guide</a><span> / </span><a class="crumb" href="sec-manage.html">Managing documents</a></div></div><main id="_content"><nav id="_side-toc-overall" class="side-toc"><div class="side-title">SUSE Documentation Style Guide</div><ol><li><a href="sec-techwriting.html" class=" "><span class="title-number">1 </span><span class="title-name">Writing technical documentation</span></a></li><li><a href="sec-content.html" class=" "><span class="title-number">2 </span><span class="title-name">Documentation content</span></a></li><li><a href="sec-name.html" class=" "><span class="title-number">3 </span><span class="title-name">Names of example items</span></a></li><li><a href="sec-outline.html" class=" "><span class="title-number">4 </span><span class="title-name">Outline of a manual</span></a></li><li><a href="sec-webwriting.html" class=" "><span class="title-number">5 </span><span class="title-name">Writing for the Web</span></a></li><li><a href="sec-language.html" class=" "><span class="title-number">6 </span><span class="title-name">Language</span></a></li><li><a href="sec-structure.html" class=" "><span class="title-number">7 </span><span class="title-name">Structure and markup</span></a></li><li><a href="sec-taglist.html" class=" "><span class="title-number">8 </span><span class="title-name">DocBook tags</span></a></li><li><a href="sec-manage.html" class=" you-are-here"><span class="title-number">9 </span><span class="title-name">Managing documents</span></a></li><li><a href="sec-format-xml.html" class=" "><span class="title-number">10 </span><span class="title-name">Formatting XML</span></a></li><li><a href="sec-asciidoc.html" class=" "><span class="title-number">11 </span><span class="title-name">Working with AsciiDoc</span></a></li><li><a href="sec-smartdocs.html" class=" "><span class="title-number">12 </span><span class="title-name">Working with Smart Docs</span></a></li><li><a href="app-terminology.html" class=" "><span class="title-number">A </span><span class="title-name">Terminology and general vocabulary</span></a></li><li><a href="sec-contributor.html" class=" "><span class="title-number">B </span><span class="title-name">Contributors</span></a></li><li><a href="app-gdfl.html" class=" "><span class="title-number">C </span><span class="title-name">GNU Free Documentation License</span></a></li> </ol> </nav><button id="_open-side-toc-overall" title="Contents"> </button><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section class="chapter" id="sec-manage" data-id-title="Managing documents"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productnumber">2024-05</span></div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">9 </span><span class="title-name">Managing documents</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
-  This section provides an overview over features of XML you can use to
-  manage documents.
- </p><section class="sect1" id="sec-remark" data-id-title="Remarks"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">9.1 </span><span class="title-name">Remarks</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-remark">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
-   Use remarks for editorial comments. Remarks can be placed within, before,
-   or after a para but must always be within a section element. When
-   creating output, remarks can be made visible in the output and thus help
-   within the editorial process. When creating the final output, deactivate
-   remarks.
-  </p><p>
-   Start remarks with your user name and the current date, then add a colon
-   (<code class="literal">:</code>) and finally your actual remark. To comment on
-   someone else's remark, add a new remark directly below it. Delete remarks
-   when the corresponding issue is resolved.
-  </p><div class="verbatim-wrap"><pre class="screen">&lt;remark&gt;tux (2013-10-13): could not find the option for foo&lt;/remark&gt;
+</script></head><body class="draft wide offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a><a href="#_bottom-pagination">Jump to page navigation: previous page [access key p]/next page [access key n]</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="index.html">SUSE Documentation Style Guide</a><span> / </span><a class="crumb" href="sec-manage.html">Managing documents</a></div></div><main id="_content"><nav id="_side-toc-overall" class="side-toc"><div class="side-title">SUSE Documentation Style Guide</div><ol><li><a href="sec-techwriting.html" class=" "><span class="title-number">1 </span><span class="title-name">Writing technical documentation</span></a></li><li><a href="sec-content.html" class=" "><span class="title-number">2 </span><span class="title-name">Documentation content</span></a></li><li><a href="sec-name.html" class=" "><span class="title-number">3 </span><span class="title-name">Names of example items</span></a></li><li><a href="sec-outline.html" class=" "><span class="title-number">4 </span><span class="title-name">Outline of a manual</span></a></li><li><a href="sec-webwriting.html" class=" "><span class="title-number">5 </span><span class="title-name">Writing for the Web</span></a></li><li><a href="sec-language.html" class=" "><span class="title-number">6 </span><span class="title-name">Language</span></a></li><li><a href="sec-structure.html" class=" "><span class="title-number">7 </span><span class="title-name">Structure and markup</span></a></li><li><a href="sec-taglist.html" class=" "><span class="title-number">8 </span><span class="title-name">DocBook tags</span></a></li><li><a href="sec-manage.html" class=" you-are-here"><span class="title-number">9 </span><span class="title-name">Managing documents</span></a></li><li><a href="sec-format-xml.html" class=" "><span class="title-number">10 </span><span class="title-name">Formatting XML</span></a></li><li><a href="sec-asciidoc.html" class=" "><span class="title-number">11 </span><span class="title-name">Working with AsciiDoc</span></a></li><li><a href="sec-smartdocs.html" class=" "><span class="title-number">12 </span><span class="title-name">Working with Smart Docs</span></a></li><li><a href="app-terminology.html" class=" "><span class="title-number">A </span><span class="title-name">Terminology and general vocabulary</span></a></li><li><a href="sec-contributor.html" class=" "><span class="title-number">B </span><span class="title-name">Contributors</span></a></li><li><a href="app-gdfl.html" class=" "><span class="title-number">C </span><span class="title-name">GNU Free Documentation License</span></a></li> </ol> </nav><button id="_open-side-toc-overall" title="Contents"> </button><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section class="chapter" id="sec-manage" data-id-title="Managing documents"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productnumber">2024-07</span></div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">9 </span><span class="title-name">Managing documents</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
+    This section provides an overview over features of XML you can use to
+    manage documents.
+  </p><section class="sect1" id="sec-remark" data-id-title="Remarks"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">9.1 </span><span class="title-name">Remarks</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-remark">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
+      Use remarks for editorial comments. Remarks can be placed within, before,
+      or after a para but must always be within a section element. When
+      creating output, remarks can be made visible in the output and thus help
+      within the editorial process. When creating the final output, deactivate
+      remarks.
+    </p><p>
+      Start remarks with your user name and the current date, then add a colon
+      (<code class="literal">:</code>) and finally your actual remark. To comment on
+      someone else's remark, add a new remark directly below it. Delete remarks
+      when the corresponding issue is resolved.
+    </p><div class="verbatim-wrap"><pre class="screen">&lt;remark&gt;tux (2013-10-13): could not find the option for foo&lt;/remark&gt;
 &lt;remark&gt;geeko (2013-11-02): see /usr/share/doc/foo.html&lt;/remark&gt;</pre></div><p>
-   You can add a
-   <code class="sgmltag-attribute">role</code>
-   attribute with one of the following values to show the type of the
-   remark:
-  </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p><span class="formalpara-title"><code class="sgmltag-attvalue">structure</code>. </span>
-      Use this type of remark to suggest changes to the text or XML
-      structure.
-     </p></li><li class="listitem"><p><span class="formalpara-title"><code class="sgmltag-attvalue">language</code>. </span>
-      Use this type of remark to suggest language improvements.
-     </p></li><li class="listitem"><p><span class="formalpara-title"><code class="sgmltag-attvalue">needinfo</code>. </span>
-      Use this type of remark to mark sections where you need input from
-      others, such as developers.
-     </p></li><li class="listitem"><p><span class="formalpara-title"><code class="sgmltag-attvalue">trans</code>. </span>
-      Use this type of remark to give hints to translators.
-     </p></li></ul></div></section><section class="sect1" id="sec-xml-comment" data-id-title="XML comments"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">9.2 </span><span class="title-name">XML comments</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-xml-comment">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
-   XML comments can be used for temporarily disabling portions of text.
-   Another use of XML comments is to create more permanent internal comments
-   or to mark up changes made for layout reasons. XML comments are never
-   visible in a publication.
-  </p><div class="verbatim-wrap"><pre class="screen">&lt;!-- This is an XML comment. --&gt;</pre></div><p>
-   For information about formatting XML comments, see
-   <a class="xref" href="sec-format-xml.html" title="Chapter 10. Formatting XML">Chapter 10, <em>Formatting XML</em></a>.
-  </p></section><section class="sect1" id="sec-entity" data-id-title="Entities"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">9.3 </span><span class="title-name">Entities</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-entity">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
-   Entities are used to expand text. There are several situations in which
-   they can be used:
-  </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
-     To represent special characters that cannot easily be displayed,
-     entered or memorized.
-    </p></li><li class="listitem"><p>
-     To integrate external files using entities representing references to
-     their file names.
-    </p></li><li class="listitem"><p>
-     To repeat content easily.
-    </p></li></ul></div><p>
-   When an entity is defined, it can be used in many places.
-   Entities increase consistency, as they only need to be defined once and will
-   automatically be expanded everywhere within the document.
-  </p><section class="sect2" id="sec-type-entity" data-id-title="Common types of entities"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">9.3.1 </span><span class="title-name">Common types of entities</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-type-entity">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>Official generic entities are maintained in the
-      <a class="link" href="https://github.com/openSUSE/doc-kit" target="_blank">Doc Kit repository</a>.
-      They include SUSE product names and other terms that are valid for every 
-      repository. In repositories configured with Doc Kit, the file 
-      <code class="filename">generic-entities.ent</code> therefore must not 
-      be changed (any changes will be overwritten by the next Doc Kit 
-      run). If there is a need to declare a specific entity that applies 
-      to the current repository only, this can be done
-      in the <code class="filename">product-entities.ent</code> or 
-      <code class="filename">entity-decl.ent</code> file in the respective 
-      repository.</p><p>
-     A <code class="filename">generic-entities.ent</code> or 
-     <code class="filename">entity-decl.ent</code> file contains several categories of
-     entities:
-    </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.11.5.5.4.1"><span class="term">Products</span></dt><dd><p>
-        All SUSE product names and other products and applications.
-        This helps when sudden name changes are necessary and avoids
-        misspellings.
-       </p></dd><dt id="id-1.11.5.5.4.2"><span class="term">Platforms</span></dt><dd><p>
-        Use entities for all hardware architectures referenced.
-        This helps when sudden name changes are necessary.
-       </p></dd><dt id="id-1.11.5.5.4.3"><span class="term">Books</span></dt><dd><p>
-        Title entities for all SUSE books.
-        This helps when sudden name changes are necessary.
-       </p></dd><dt id="id-1.11.5.5.4.4"><span class="term">General Entities</span></dt><dd><p>
-        Network IP addresses, host names and user names.
-       </p></dd></dl></div><p>
-     There are several guidelines to consider when working with product
-     entities for SUSE documentation:
-    </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.11.5.5.6.1"><span class="term">Entity selection</span></dt><dd><p>
-        Use the entity name
-        <code class="sgmltag-genentity">&amp;productname;</code>
-        to identify the product for which the documentation is built. Set the
-        value of this entity once per release and have it expand to the name
-        of the current product:
-       </p><div class="verbatim-wrap"><pre class="screen">&amp;productname; includes 389-ds.</pre></div><p>
-        If you need to reference a specific subproduct or a different product,
-        use a more specific entity:
-       </p><div class="verbatim-wrap"><pre class="screen">Tuning &amp;sle; for SAP</pre></div></dd><dt id="id-1.11.5.5.6.2"><span class="term">Acronyms</span></dt><dd><p>
-        In some cases (for example, limited space in table cells or in titles), 
-        it is acceptable to use an entity for a product name acronym. Find the 
-        approved entities for product name acronyms in the entity declaration 
-        files, such as <code class="filename">product-entities.ent</code> or 
-        <code class="filename">generic-entities.ent</code>. For a product name acronym, 
-        you can use the generic entity <code class="sgmltag-genentity">&amp;productnameshort;</code>. 
-        If you need acronym entities for specific products, they usually have an 
-        appended <code class="literal">a</code> at the end, for example, 
-        <code class="sgmltag-genentity">&amp;slsa;</code> for the acronym <span class="quote">“<span class="quote">SLES.</span>”</span>
-        </p></dd><dt id="id-1.11.5.5.6.3"><span class="term">Trademarks</span></dt><dd><p>
-        Follow the rules under <a class="xref" href="sec-language.html#sec-trademark" title="6.21. Trademarks">Section 6.21, “Trademarks”</a> and
-        <a class="xref" href="sec-structure.html#sec-product" title="7.17. Products">Section 7.17, “Products”</a>.
-       </p></dd></dl></div><p>If an entity is placed at the beginning of a phrase or title, its resolved 
-      form is usually lowercase (unless specified in uppercase, for example, for product names).
-      To have it capitalized, use the <code class="sgmltag-emptytag">&lt;phrase role="style:sentencecase"/&gt;</code> element. 
-      For example:</p><div class="verbatim-wrap"><pre class="screen">&lt;phrase role="style:sentencecase"&gt;<code class="sgmltag-genentity">&amp;ulp;</code>&lt;/phrase&gt;</pre></div><p>The entity <code class="sgmltag-genentity">&amp;ulp;</code> expands into <span class="quote">“<span class="quote">User space live patching</span>”</span>.</p><p>Never add this tag to the content within <code class="sgmltag-emptytag">&lt;command/&gt;</code> and <code class="sgmltag-emptytag">&lt;systemitem/&gt;</code> elements.
-     Capitalizing anything inside these elements makes the content ambiguous.
-     </p></section><section class="sect2" id="sec-use-entity" data-id-title="Using entity files"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">9.3.2 </span><span class="title-name">Using entity files</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-use-entity">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>SUSE uses a set of custom entities.
-   Find these entities in the <code class="filename">*.ent</code>
-   files in each documentation repository. One entity file can include other entity files.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
-      Entity files are only used for original, English-language documents.
-      Translated documents contain only the resolved form of entities,
-      that is, plain-text directly in the document.
-     </p></li><li class="listitem"><p>
-      If you need a new entity to be used generically across all repositories, open a 
-      pull request against <code class="filename">generic-entities.ent</code> in the Doc Kit 
-      repository. After the change is approved by the Doc Kit maintainers, the entity 
-      update for <code class="filename">generic-entities.ent</code> will be rolled out to all 
-      Doc Kit-based repositories with the next Doc Kit run.
-      If you need a custom entity that only applies to a specific repository, define 
-      it in <code class="filename">product-entities.ent</code> or in <code class="filename">entities-decl.ent</code> 
-      in this specific repository.</p><p>Do not include custom entity definitions directly in the file header, 
-      unless the custom definitions are needed to override externally embedded entities.
-     </p></li><li class="listitem"><p>
-      Use the UTF-8 encoding when editing and saving
-      the entity declaration file or any of the SUSE XML files.
-     </p></li></ul></div><p>
-    Each header of a SUSE XML file includes the entity declaration file (by
-    means of an entity):
-   </p><div class="verbatim-wrap"><pre class="screen">&lt;!ENTITY % entities SYSTEM "generic-entities.ent"&gt;
+      You can add a <code class="sgmltag-attribute">role</code> attribute with one of the
+      following values to show the type of the remark:
+    </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p><span class="formalpara-title"><code class="sgmltag-attvalue">structure</code>. </span>
+            Use this type of remark to suggest changes to the text or XML
+            structure.
+          </p></li><li class="listitem"><p><span class="formalpara-title"><code class="sgmltag-attvalue">language</code>. </span>
+            Use this type of remark to suggest language improvements.
+          </p></li><li class="listitem"><p><span class="formalpara-title"><code class="sgmltag-attvalue">needinfo</code>. </span>
+            Use this type of remark to mark sections where you need input from
+            others, such as developers.
+          </p></li><li class="listitem"><p><span class="formalpara-title"><code class="sgmltag-attvalue">trans</code>. </span>
+            Use this type of remark to give hints to translators.
+          </p></li></ul></div></section><section class="sect1" id="sec-xml-comment" data-id-title="XML comments"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">9.2 </span><span class="title-name">XML comments</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-xml-comment">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
+      XML comments can be used for temporarily disabling portions of text.
+      Another use of XML comments is to create more permanent internal comments
+      or to mark up changes made for layout reasons. XML comments are never
+      visible in a publication.
+    </p><div class="verbatim-wrap"><pre class="screen">&lt;!-- This is an XML comment. --&gt;</pre></div><p>
+      For information about formatting XML comments, see
+      <a class="xref" href="sec-format-xml.html" title="Chapter 10. Formatting XML">Chapter 10, <em>Formatting XML</em></a>.
+    </p></section><section class="sect1" id="sec-entity" data-id-title="Entities"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">9.3 </span><span class="title-name">Entities</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-entity">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
+      Entities are used to expand text. There are several situations in which
+      they can be used:
+    </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+          To represent special characters that cannot easily be displayed,
+          entered or memorized.
+        </p></li><li class="listitem"><p>
+          To integrate external files using entities representing references to
+          their file names.
+        </p></li><li class="listitem"><p>
+          To repeat content easily.
+        </p></li></ul></div><p>
+      When an entity is defined, it can be used in many places. Entities
+      increase consistency, as they only need to be defined once and will
+      automatically be expanded everywhere within the document.
+    </p><section class="sect2" id="sec-type-entity" data-id-title="Common types of entities"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">9.3.1 </span><span class="title-name">Common types of entities</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-type-entity">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
+        Official generic entities are maintained in the
+        <a class="link" href="https://github.com/openSUSE/doc-kit" target="_blank">Doc Kit
+        repository</a>. They include SUSE product names and other terms
+        that are valid for every repository. In repositories configured with
+        Doc Kit, the file <code class="filename">generic-entities.ent</code> therefore
+        must not be changed (any changes will be overwritten by the next Doc
+        Kit run). If there is a need to declare a specific entity that applies
+        to the current repository only, this can be done in the
+        <code class="filename">product-entities.ent</code> or
+        <code class="filename">entity-decl.ent</code> file in the respective repository.
+      </p><p>
+        A <code class="filename">generic-entities.ent</code> or
+        <code class="filename">entity-decl.ent</code> file contains several categories
+        of entities:
+      </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.11.5.5.4.1"><span class="term">Products</span></dt><dd><p>
+              All SUSE product names and other products and applications.
+              This helps when sudden name changes are necessary and avoids
+              misspellings.
+            </p></dd><dt id="id-1.11.5.5.4.2"><span class="term">Platforms</span></dt><dd><p>
+              Use entities for all hardware architectures referenced. This
+              helps when sudden name changes are necessary.
+            </p></dd><dt id="id-1.11.5.5.4.3"><span class="term">Books</span></dt><dd><p>
+              Title entities for all SUSE books. This helps when sudden name
+              changes are necessary.
+            </p></dd><dt id="id-1.11.5.5.4.4"><span class="term">General Entities</span></dt><dd><p>
+              Network IP addresses, host names and user names.
+            </p></dd></dl></div><p>
+        There are several guidelines to consider when working with product
+        entities for SUSE documentation:
+      </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.11.5.5.6.1"><span class="term">Entity selection</span></dt><dd><p>
+              Use the entity name <code class="sgmltag-genentity">&amp;productname;</code> to
+              identify the product for which the documentation is built. Set
+              the value of this entity once per release and have it expand to
+              the name of the current product:
+            </p><div class="verbatim-wrap"><pre class="screen">&amp;productname; includes 389-ds.</pre></div><p>
+              If you need to reference a specific subproduct or a different
+              product, use a more specific entity:
+            </p><div class="verbatim-wrap"><pre class="screen">Tuning &amp;sle; for SAP</pre></div></dd><dt id="id-1.11.5.5.6.2"><span class="term">Acronyms</span></dt><dd><p>
+              In some cases (for example, limited space in table cells or in
+              titles), it is acceptable to use an entity for a product name
+              acronym. Find the approved entities for product name acronyms in
+              the entity declaration files, such as
+              <code class="filename">product-entities.ent</code> or
+              <code class="filename">generic-entities.ent</code>. For a product name
+              acronym, you can use the generic entity
+              <code class="sgmltag-genentity">&amp;productnameshort;</code>. If you need
+              acronym entities for specific products, they usually have an
+              appended <code class="literal">a</code> at the end, for example,
+              <code class="sgmltag-genentity">&amp;slsa;</code> for the acronym
+              <span class="quote">“<span class="quote">SLES.</span>”</span>
+            </p></dd><dt id="id-1.11.5.5.6.3"><span class="term">Trademarks</span></dt><dd><p>
+              Follow the rules under <a class="xref" href="sec-language.html#sec-trademark" title="6.21. Trademarks">Section 6.21, “Trademarks”</a> and
+              <a class="xref" href="sec-structure.html#sec-product" title="7.17. Products">Section 7.17, “Products”</a>.
+            </p></dd></dl></div><p>
+        If an entity is placed at the beginning of a phrase or title, its
+        resolved form is usually lowercase (unless specified in uppercase, for
+        example, for product names). To have it capitalized, use the
+        <code class="sgmltag-emptytag">&lt;phrase role="style:sentencecase"/&gt;</code> element.
+        For example:
+      </p><div class="verbatim-wrap"><pre class="screen">&lt;phrase role="style:sentencecase"&gt;<code class="sgmltag-genentity">&amp;ulp;</code>&lt;/phrase&gt;</pre></div><p>
+        The entity <code class="sgmltag-genentity">&amp;ulp;</code> expands into <span class="quote">“<span class="quote">User
+        space live patching</span>”</span>.
+      </p><p>
+        Never add this tag to the content within
+        <code class="sgmltag-emptytag">&lt;command/&gt;</code> and
+        <code class="sgmltag-emptytag">&lt;systemitem/&gt;</code> elements. Capitalizing anything
+        inside these elements makes the content ambiguous.
+      </p></section><section class="sect2" id="sec-use-entity" data-id-title="Using entity files"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">9.3.2 </span><span class="title-name">Using entity files</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-use-entity">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
+        SUSE uses a set of custom entities. Find these entities in the
+        <code class="filename">*.ent</code> files in each documentation repository. One
+        entity file can include other entity files.
+      </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Entity files are only used for original, English-language
+            documents. Translated documents contain only the resolved form of
+            entities, that is, plain-text directly in the document.
+          </p></li><li class="listitem"><p>
+            If you need a new entity to be used generically across all
+            repositories, open a pull request against
+            <code class="filename">generic-entities.ent</code> in the Doc Kit
+            repository. After the change is approved by the Doc Kit
+            maintainers, the entity update for
+            <code class="filename">generic-entities.ent</code> will be rolled out to all
+            Doc Kit-based repositories with the next Doc Kit run. If you need a
+            custom entity that only applies to a specific repository, define it
+            in <code class="filename">product-entities.ent</code> or in
+            <code class="filename">entities-decl.ent</code> in this specific repository.
+          </p><p>
+            Do not include custom entity definitions directly in the file
+            header, unless the custom definitions are needed to override
+            externally embedded entities.
+          </p></li><li class="listitem"><p>
+            Use the UTF-8 encoding when editing and saving the entity
+            declaration file or any of the SUSE XML files.
+          </p></li></ul></div><p>
+        Each header of a SUSE XML file includes the entity declaration file
+        (by means of an entity):
+      </p><div class="verbatim-wrap"><pre class="screen">&lt;!ENTITY % entities SYSTEM "generic-entities.ent"&gt;
 %entities;</pre></div><div class="example" id="ex-entity" data-id-title="Excerpt from product-entities.ent"><div class="title-container"><div class="example-title-wrap"><div class="example-title"><span class="title-number-name"><span class="title-number">Example 9.1: </span><span class="title-name">Excerpt from <code class="filename">product-entities.ent</code> </span></span><a title="Permalink" class="permalink" href="sec-manage.html#ex-entity">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;!ENTITY<span class="callout" id="co-declaration">1</span>product-sp<span class="callout" id="co-definition">2</span> "1<span class="callout" id="co-value">3</span>"&gt;
 &lt;!ENTITY product-ga  "15"&gt;
 &lt;!ENTITY productnumber-regurl    "&amp;product-ga;.&amp;product-sp;<span class="callout" id="co-entity">4</span>"&gt;
 &lt;!ENTITY productnumber "&lt;phrase xmlns='http://docbook.org/ns/docbook' role='productnumber'&gt;15&lt;/phrase"&gt;<span class="callout" id="co-tag">5</span>"&gt;</pre></div><div class="calloutlist"><table style="border: 0; "><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-declaration"><span class="callout">1</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-       Making an entity declaration.
-      </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-definition"><span class="callout">2</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-       Defining the entity name.
-      </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-value"><span class="callout">3</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-       Setting the value which the processed entity should expand to.
-      </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-entity"><span class="callout">4</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-       Using another entity within the entity value.
-       This entity reference is only valid if the other entity is defined
-       somewhere within the scope of the XML document that is built.
-       However, it does not matter whether the entity is defined before or
-       after the current entity definition.
-      </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-tag"><span class="callout">5</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-       Using a DocBook/GeekoDoc element within the entity value.
-       The attribute <code class="sgmltag-attribute">xmlns</code> must be included to
-       define the correct XML namespace.
-      </p></td></tr></table></div></div></div></section></section><section class="sect1" id="sec-xinclude" data-id-title="XInclude elements"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">9.4 </span><span class="title-name">XInclude elements</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-xinclude">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
-   XInclude elements are used to create modular source files that are easier
-   to work with and can be reused. When editing a book, create a new source
-   file for every chapter. Later, create a new GeekoDoc file that can serve as
-   the central point. In this file, use XInclude elements to reference all
-   chapters in the correct order:
-  </p><div class="verbatim-wrap"><pre class="screen">&lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gfdl.xml"/&gt;</pre></div><p>
-   XInclude elements allow adding common sections to multiple books or
-   articles without having to maintain the text in multiple places. Common
-   sections include licenses and information on typographical conventions.
-   XIncludes also simplify co-editing documentation with others in a version
-   control system as they reduce the chance of merge conflicts.
-  </p><p>
-   By default, files referenced via XIncludes must be well-formed XML files that
-   are also valid GeekoDoc fragments.
-   This means that they must have a single top-level element and must not
-   contain elements that are not allowed in GeekoDoc.
-   Files that are supposed to be referenced multiple times from within the same
-   set, book or article must not contain any <code class="sgmltag-attribute">xml:id</code>
-   attributes.
-  </p><p>
-   XIncludes also allow embedding plaintext files, for example, as the
-   content in <code class="sgmltag-emptytag">&lt;screen/&gt;</code> elements.
-   To embed a plaintext file, add the attribute
-   <code class="sgmltag-attribute">parse="text"</code> to the
-   <code class="sgmltag-emptytag">&lt;xi:include/&gt;</code> element.
-  </p></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="sec-taglist.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 8 </span>DocBook tags</span></a> </div><div><a class="pagination-link next" href="sec-format-xml.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 10 </span>Formatting XML</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="sec-manage.html#sec-remark"><span class="title-number">9.1 </span><span class="title-name">Remarks</span></a></span></li><li><span class="section"><a href="sec-manage.html#sec-xml-comment"><span class="title-number">9.2 </span><span class="title-name">XML comments</span></a></span></li><li><span class="section"><a href="sec-manage.html#sec-entity"><span class="title-number">9.3 </span><span class="title-name">Entities</span></a></span></li><li><span class="section"><a href="sec-manage.html#sec-xinclude"><span class="title-number">9.4 </span><span class="title-name">XInclude elements</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
+              Making an entity declaration.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-definition"><span class="callout">2</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              Defining the entity name.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-value"><span class="callout">3</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              Setting the value which the processed entity should expand to.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-entity"><span class="callout">4</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              Using another entity within the entity value. This entity
+              reference is only valid if the other entity is defined somewhere
+              within the scope of the XML document that is built. However, it
+              does not matter whether the entity is defined before or after the
+              current entity definition.
+            </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-tag"><span class="callout">5</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+              Using a DocBook/GeekoDoc element within the entity value. The
+              attribute <code class="sgmltag-attribute">xmlns</code> must be included to
+              define the correct XML namespace.
+            </p></td></tr></table></div></div></div></section></section><section class="sect1" id="sec-xinclude" data-id-title="XInclude elements"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">9.4 </span><span class="title-name">XInclude elements</span></span> <a title="Permalink" class="permalink" href="sec-manage.html#sec-xinclude">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
+      XInclude elements are used to create modular source files that are easier
+      to work with and can be reused. When editing a book, create a new source
+      file for every chapter. Later, create a new GeekoDoc file that can serve
+      as the central point. In this file, use XInclude elements to reference
+      all chapters in the correct order:
+    </p><div class="verbatim-wrap"><pre class="screen">&lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gfdl.xml"/&gt;</pre></div><p>
+      XInclude elements allow adding common sections to multiple books or
+      articles without having to maintain the text in multiple places. Common
+      sections include licenses and information on typographical conventions.
+      XIncludes also simplify co-editing documentation with others in a version
+      control system as they reduce the chance of merge conflicts.
+    </p><p>
+      By default, files referenced via XIncludes must be well-formed XML files
+      that are also valid GeekoDoc fragments. This means that they must have a
+      single top-level element and must not contain elements that are not
+      allowed in GeekoDoc. Files that are supposed to be referenced multiple
+      times from within the same set, book or article must not contain any
+      <code class="sgmltag-attribute">xml:id</code> attributes.
+    </p><p>
+      XIncludes also allow embedding plaintext files, for example, as the
+      content in <code class="sgmltag-emptytag">&lt;screen/&gt;</code> elements. To embed a
+      plaintext file, add the attribute
+      <code class="sgmltag-attribute">parse="text"</code> to the
+      <code class="sgmltag-emptytag">&lt;xi:include/&gt;</code> element.
+    </p></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="sec-taglist.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 8 </span>DocBook tags</span></a> </div><div><a class="pagination-link next" href="sec-format-xml.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 10 </span>Formatting XML</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="sec-manage.html#sec-remark"><span class="title-number">9.1 </span><span class="title-name">Remarks</span></a></span></li><li><span class="section"><a href="sec-manage.html#sec-xml-comment"><span class="title-number">9.2 </span><span class="title-name">XML comments</span></a></span></li><li><span class="section"><a href="sec-manage.html#sec-entity"><span class="title-number">9.3 </span><span class="title-name">Entities</span></a></span></li><li><span class="section"><a href="sec-manage.html#sec-xinclude"><span class="title-number">9.4 </span><span class="title-name">XInclude elements</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
                  2024</span></div></div></footer></body></html>

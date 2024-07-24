@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Revision History: SUSE Documentation Style Guide (SUSE Documentation Style Guide)</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style.css"/>
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
-<meta name="title" content="Revision History | 2024-05"/>
-<meta name="description" content="Updated the “Entities” subsection in “Managing documents”: common types of entities and their use cases, the Doc Kit repository that maintains offici…"/>
-<meta name="product-number" content="2024-05"/>
+<meta name="title" content="Revision History | 2024-07"/>
+<meta name="description" content="Added an instruction in the subsection “DocBook tags” on when to use the &lt;guimenu/&gt; tag. It is used to mark up all GUI elements like button, label an…"/>
+<meta name="product-number" content="2024-07"/>
 <meta name="book-title" content="SUSE Documentation Style Guide"/>
 <meta name="chapter-title" content="Revision History"/>
 <meta name="tracker-url" content="https://github.com/SUSE/doc-styleguide/issues/new"/>
@@ -38,7 +38,7 @@
       }
     ],
       
-    "dateModified": "2024-05-01T00:00+02:00",
+    "dateModified": "2024-07-01T00:00+02:00",
       
     "datePublished": "2014-02-01T00:00+02:00",
       
@@ -80,379 +80,811 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="revhistory" id="rh-styleguide"><h1 class="title">Revision History: SUSE Documentation Style Guide</h1><section class="revision" id="sec-change-2024-05"><h2><span class="revision date">2024-05</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Updated the <span class="quote">“<span class="quote">Entities</span>”</span> subsection in 
-        <span class="quote">“<span class="quote">Managing documents</span>”</span>: common types of entities and their 
-        use cases, the Doc Kit repository that maintains official generic entities,
-        creating custom entities, and entity files.</p></li><li class="listitem"><p>Updated the <span class="quote">“<span class="quote">Prompts</span>”</span> subsection in <span class="quote">“<span class="quote">Structure 
-      and markup</span>”</span> with clearer info on using prompts and prompt entities 
-      (always specify regular or elevated privileges).</p></li><li class="listitem"><p>Terminology update: flash disk → flash drive, in sync with TermWeb.</p></li><li class="listitem"><p><span class="quote">“<span class="quote">Language</span>”</span> and <span class="quote">“<span class="quote">Terminology</span>”</span> updated with 
-      info about TermWeb that is now fully launched and available to all SUSE employees.</p></li><li class="listitem"><p>The style guide changed its structure to the three-column layout with clearly 
-     featured subsections.</p></li></ul></div>
-  </section><section class="revision" id="sec-change-2024-02"><h2><span class="revision date">2024-02</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Added a new section on Profiling to the <span class="quote">“<span class="quote">Structure 
-        and markup</span>”</span> chapter.</p></li><li class="listitem"><p>Updated the introduction to <span class="quote">“<span class="quote">Structure and markup</span>”</span> 
-      with links to doc-kit that now hosts examples of rendered books 
-      and articles.</p></li><li class="listitem"><p>More in <span class="quote">“<span class="quote">Structure and markup</span>”</span>: links to 
-      READMEs in doc-modular to find naming conventions for file 
-      and figure names, and guidelines for using the 
-      <code class="sgmltag-emptytag">&lt;xrefstyle/&gt;</code> attribute—only use the tags 
-      <code class="sgmltag-emptytag">&lt;select:/&gt;</code> and <code class="sgmltag-emptytag">&lt;template:/&gt;</code>
-      with it to customize cross-links.</p></li><li class="listitem"><p>Added clarified reference on using entities to create generic names 
-      in the <span class="quote">“<span class="quote">Names of example items</span>”</span> chapter, with the link to 
-      doc-kit.</p></li></ul></div>
-  </section><section class="revision" id="sec-change-2023-11"><h2><span class="revision date">2023-11</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Created a new <span class="quote">“<span class="quote">Revision history</span>”</span> that opens as a 
-      separate file and is linked from the main doc. Added info about 
-      this in the <span class="quote">“<span class="quote">Smart Docs</span>”</span> chapter: Use the 
-      <code class="sgmltag-emptytag">&lt;revhistory/&gt;</code> tag in the 
-      <code class="sgmltag-emptytag">&lt;info/&gt;</code> part of XML file.</p></li><li class="listitem"><p>Updated the rules for creating glossaries in section <span class="quote">“<span class="quote">Glossaries,</span>”</span> 
-      which also contains an example of the specific structure that must 
-      be used. A style sheet update now supports the automatic alphabetical 
-      ordering of items.</p></li><li class="listitem"><p>Updated the <span class="quote">“<span class="quote">Structure and markup</span>”</span> chapter: Use the
-      <code class="sgmltag-emptytag">&lt;href/&gt;</code> element to provide cross-references 
-      only within the same doc set; the tag <code class="sgmltag-emptytag">&lt;citetitle/&gt;</code>
-      is not translated and must only reference names of printed books (section 
-      <span class="quote">“<span class="quote">DocBook tags, Inline elements</span>”</span>).</p></li></ul></div>
-  </section><section class="revision" id="sec-change-2023-09"><h2><span class="revision date">2023-09</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Updated the chapter on AsciiDoc: sorted the recommendations and
-      added the link to the guidance on AsciiDoc in Technical Reference
-      Documentation. </p></li><li class="listitem"><p> Updated the Language chapter with info on product names. If a
-      product name is not in the style guide's Terminology table or in the
-      entities Doc Kit file, refer to the official SUSE Products page and the
-      Marketing department. Do not use articles in front of product names.
-     </p></li><li class="listitem"><p> New items in the Terminology table: <span class="quote">“<span class="quote">since</span>”</span> rejected in
-      the meaning of <span class="quote">“<span class="quote">because</span>”</span>; <span class="quote">“<span class="quote">timeout</span>”</span> and
-       <span class="quote">“<span class="quote">system-wide</span>”</span> added as approved terms. <span class="quote">“<span class="quote">Data</span>”</span>
-      only requires singular, so <span class="quote">“<span class="quote">data is</span>”</span> is approved and
-       <span class="quote">“<span class="quote">data are</span>”</span> is rejected. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2023-06"><h2><span class="revision date">2023-06</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added a new chapter on Smart Docs, describing the principle, the
-      structure and its building blocks. </p></li><li class="listitem"><p> Updated the recommended minimal title length with 29 characters for
-      SEO purposes. </p></li><li class="listitem"><p> Updated the <span class="quote">“<span class="quote">Inline elements</span>”</span> table in the
-       <span class="quote">“<span class="quote">DocBook Tags</span>”</span> chapter: added the guidance to use the secure
-      protocol prefix https:// and to use the package tag to replace systemitem
-      class="resource". </p></li><li class="listitem"><p> Added information on the use of the formalpara tag. </p></li><li class="listitem"><p> Added information about the element phrase role="style:sentencecase"
-      for the style sheets to expand the relevant entities as uppercase, when
-      needed. </p></li><li class="listitem"><p> Updated the Terminology table with <span class="quote">“<span class="quote">drop-down list</span>”</span>,
-       <span class="quote">“<span class="quote">list box</span>”</span> and <span class="quote">“<span class="quote">right-, left-, middle click.</span>”</span>
-     </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2023-02"><h2><span class="revision date">2023-02</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Finalized the file and image naming conventions and provided a
-      reference to the doc-modular repository in the <span class="quote">“<span class="quote">Structure and
-       Markup</span>”</span> chapter. </p></li><li class="listitem"><p> Added rules for quotation marks in chapter
-      <span class="quote">“<span class="quote">Language</span>”</span> only use them in quotes; in other cases, use
-      the <span class="emphasis"><em>emphasis</em></span> element to make words or phrases more
-      conspicuous. </p></li><li class="listitem"><p> Added the guidance to avoid using single quotation marks. </p></li><li class="listitem"><p> Updated the <span class="quote">“<span class="quote">Structure and Markup</span>”</span> chapter with the
-      instruction to not use articles before book and chapter titles when
-      referencing them. </p></li><li class="listitem"><p> Updated rules for the line length (100 char now) and indentation
-      (2-space characters now) in section <span class="quote">“<span class="quote">Formatting XML.</span>”</span>
-     </p></li><li class="listitem"><p> Clarified the usage of the term <span class="quote">“<span class="quote">register to/with</span>”</span> in
-       <span class="quote">“<span class="quote">Terminology.</span>”</span>
-     </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2022-11"><h2><span class="revision date">2022-11</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added new content, updated and restructured the content of the
-       <span class="quote">“<span class="quote">Cross-references</span>”</span> section (a warning not to include xref
-      elements into titles). </p></li><li class="listitem"><p> Updated the <span class="quote">“<span class="quote">Screens</span>”</span> subsection with the info on
-      automatic syntax highlighting. </p></li><li class="listitem"><p> Expanded the rule of using the comma - no use of comma in simple
-      series like x, y and z. </p></li><li class="listitem"><p> Described how you can group different callouts to point to the same
-      annotation in the text (helps avoid repeating the same annotation).
-     </p></li><li class="listitem"><p> Updated chapter <span class="quote">“<span class="quote">Language</span>”</span> with punctuation rules for
-      quotation marks - commas and periods go inside them per AE punctuation
-      rules. </p></li><li class="listitem"><p> Added terms: <span class="quote">“<span class="quote">unit,</span>”</span>
-      <span class="quote">“<span class="quote">unit file,</span>”</span>
-      <span class="quote">“<span class="quote">console,</span>”</span>
-      <span class="quote">“<span class="quote">shell,</span>”</span>
-      <span class="quote">“<span class="quote">terminal,</span>”</span>
-      <span class="quote">“<span class="quote">init script,</span>”</span> and <span class="quote">“<span class="quote">whitespace.</span>”</span>
-     </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2022-08"><h2><span class="revision date">2022-08</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added new content on the correct use of doc.suse.com URL in the
-      ‘External links to SUSE documentation’ subsection </p></li><li class="listitem"><p> Added general instructions on how to create and style tables in the
-      section ‘Structure and markup’ </p></li><li class="listitem"><p> Added a subsection about hyphens to the ‘Language’ section </p></li><li class="listitem"><p> Added and updated terms and definitions: ‘bare metal’, ‘drop-down
-      list’, ‘list box’, ‘screen’, ‘usage’, ‘utilization’, ‘view’,
-      ‘multi-version’ (adjective) </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2022-06"><h2><span class="revision date">2022-06</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added a section on localization-friendly writing in the 'Web
-      writing' chapter </p></li><li class="listitem"><p> Added a section on creating SP-independent links to the chapter
-      ‘Structure and markup’ </p></li><li class="listitem"><p> Added definitions of program, application, script, command, tool,
-      form, dialog </p></li><li class="listitem"><p> Updated the 'DocBook tags' section of the style guide (fixed typos
-      and layout) </p></li><li class="listitem"><p> Added specification on the use of the % sign </p></li><li class="listitem"><p> Added admonition about version numbers in chapter titles </p></li><li class="listitem"><p> Rearranged sections in "Structure and markup chapter" in
-      alphabetical order </p></li><li class="listitem"><p> Added terms 'codestream', 'crash dump' </p></li><li class="listitem"><p> Updated guidance on punctuation to use at the end of list items
-     </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2022-04"><h2><span class="revision date">2022-04</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Updated the Abstract instances in Style guide </p></li><li class="listitem"><p> Updated the chapter abstract wording and the example of an abstract
-      to match the char limit. </p></li><li class="listitem"><p> Added a section on Web writing and SEO-friendly content </p></li><li class="listitem"><p> Added a section on Tech writing to replace the Audience section
-     </p></li><li class="listitem"><p> Added a section about DocBook tags allowlist </p></li><li class="listitem"><p> Added terms: 'changelog', 'real time', 'coldplug' </p></li><li class="listitem"><p> Minor bug fixes of the style guide </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2021-12"><h2><span class="revision date">2021-12</span></h2>
-   <p> Updated recommendations for <code class="sgmltag-emptytag">&lt;abstracts/&gt;</code> and
-     <code class="sgmltag-emptytag">&lt;highlights/&gt;</code>: Always add an abstract to chapters,
-    with a length of 70 and 150 characters. Do not use <code class="sgmltag-emptytag">&lt;highlights/&gt;</code>. </p>
-  </section><section class="revision" id="sec-change-2021-10"><h2><span class="revision date">2021-10</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Updated recommended prompt style: Where possible, use short prompts
-      such as <code class="prompt user">&gt; </code> or <code class="prompt root"># </code>. </p></li><li class="listitem"><p> Updated the definitions of <span class="emphasis"><em>installation medium</em></span>
-      and <span class="emphasis"><em>installation source</em></span> to clarify that
-       <span class="emphasis"><em>installation medium</em></span> should only be used where a
-      physical medium is concerned. </p></li><li class="listitem"><p> Added rules for when multiple commands can be combined within a
-      single <code class="sgmltag-emptytag">&lt;screen/&gt;</code> element. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2021-08"><h2><span class="revision date">2021-08</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Updated the spelling of <span class="emphasis"><em>lifecycle</em></span> (former
-      spelling, <span class="emphasis"><em>life cycle</em></span>). </p></li><li class="listitem"><p> Updated recommendations on how to list contributors. Change
-       <em class="citetitle">Contributors</em> appendix accordingly. </p></li><li class="listitem"><p> Mentioned that placeholders must not contain spaces. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2021-04"><h2><span class="revision date">2021-04</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Updated the standard title for sections comprising of references to
-      other documents from <span class="emphasis"><em>For more information</em></span> to
-       <span class="emphasis"><em>More information</em></span>. </p></li><li class="listitem"><p> Mentioned Doc Kit default entity file. </p></li><li class="listitem"><p> Added examples for hyphenation and file names/directory names.
-     </p></li><li class="listitem"><p> Clarified/shortened/reformatted various language advice. Improved
-      wording consistency of references to other sections of the guide. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2021-02"><h2><span class="revision date">2021-02</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Mentioned that we support the Inclusive Naming Initiative. </p></li><li class="listitem"><p> Added section about rules for linking to external sites. </p></li><li class="listitem"><p> Added a section about avoiding promises of future features. </p></li><li class="listitem"><p> Mentioned that UI labels should always be capitalized as they are
-      capitalized in the UI. </p></li><li class="listitem"><p> Clarified section about abbreviations. </p></li><li class="listitem"><p> Improved structure of capitalization section. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2020-12"><h2><span class="revision date">2020-12</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Updated the Style Guide to recommend the use of sentence case for
-      titles. Book, article, and set titles are to remain in title case. </p></li><li class="listitem"><p> Added guideline when to use noun-based and when to use verb-based
-      headings. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2020-10"><h2><span class="revision date">2020-10</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Explained issues with URL shorteners. </p></li><li class="listitem"><p> Clarified section on creating IDs by removing confusing left-overs
-      from description of former <code class="literal">.</code>-based ID scheme. </p></li><li class="listitem"><p> Clarified and updated section about entities. Entities are not used
-      during translation. </p></li><li class="listitem"><p> Updated XInclude section. XIncluded documents can also be
-      plain-text. </p></li><li class="listitem"><p> Updated formatting of XML examples across the document to 1-space
-      indent, as is encouraged in the XML formatting section of this document.
-     </p></li><li class="listitem"><p> Removed Indexes section. There has not been a practical use of this
-      section in several years. </p></li><li class="listitem"><p> Updated advice on lists. Deduplicated the sections about lists in
-      the <em class="citetitle">Structure and Markup</em> section versus the section
-      in the <em class="citetitle">Language</em> section. Aligned list terminology
-      with DocBook terminology. </p></li><li class="listitem"><p> Improved phrasing and fixed minor language and technical errors
-      across the document. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2020-08"><h2><span class="revision date">2020-08</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Removed outdated and overly specific recommendation to use Shutter
-      application from section Screenshots. </p></li><li class="listitem"><p> Clarified section Outline. Included better guidance for article
-      outlines. Clarified when to contact product managers. Removed outdated
-      reference to SVN metadata. </p></li><li class="listitem"><p> Updated URLs of DocBook Definitive Guide. Updated URLs to HTTPS.
-     </p></li><li class="listitem"><p> Moved advice to include at least introductory content in each
-      section from Language/Headings section to Structure/Outlining section.
-     </p></li><li class="listitem"><p> Clarified that admonition titles should use title style. </p></li><li class="listitem"><p> Removed listing of document authors. </p></li><li class="listitem"><p> Made language fixes, clarifications, and added explanations. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2019-11"><h2><span class="revision date">2019-11</span></h2>
-   <p> Added guidance regarding appropriate on-page screenshot sizing.
-   </p>
-  </section><section class="revision" id="sec-change-2019-08"><h2><span class="revision date">2019-08</span></h2>
-   <p> Added minimal guidance regarding AsciiDoc documents. </p>
-  </section><section class="revision" id="sec-change-2019-07"><h2><span class="revision date">2019-07</span></h2>
-   <p> Updated guidance regarding use of <code class="literal">.</code> and
-     <code class="literal">_</code> in XML IDs. </p>
-  </section><section class="revision" id="sec-change-2019-03"><h2><span class="revision date">2019-03</span></h2>
-   <p> Added guidance regarding easily outdated information in screens and
-    screenshots. </p>
-  </section><section class="revision" id="sec-change-2018-11"><h2><span class="revision date">2018-11</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added terminology entry for <span class="emphasis"><em>subsystem</em></span>. </p></li><li class="listitem"><p> Improved guidance regarding numbers and measurments. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2018-08"><h2><span class="revision date">2018-08</span></h2>
-   <p> Improved guidance regarding path names. </p>
-  </section><section class="revision" id="sec-change-2018-07"><h2><span class="revision date">2018-07</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added guidance regarding XML formatting. </p></li><li class="listitem"><p> Improved guidance regarding commands. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2018-06"><h2><span class="revision date">2018-06</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Documented ID prefix for prefaces. </p></li><li class="listitem"><p> Added guidance regarding scaling of screenshots. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2018-04"><h2><span class="revision date">2018-04</span></h2>
-   <p> Added terminology entry for <span class="emphasis"><em>namespace</em></span>. </p>
-  </section><section class="revision" id="sec-change-2017-11"><h2><span class="revision date">2017-11</span></h2>
-   <p> Improved guidance regarding XML IDs. </p>
-  </section><section class="revision" id="sec-change-2017-10"><h2><span class="revision date">2017-10</span></h2>
-   <p> Updated terminology entry for <span class="emphasis"><em>IBM Z</em></span>. </p>
-  </section><section class="revision" id="sec-change-2017-04"><h2><span class="revision date">2017-04</span></h2>
-   <p> Added terminology entries for <span class="emphasis"><em>e-mail</em></span>,
-     <span class="emphasis"><em>hot key</em></span>. </p>
-  </section><section class="revision" id="sec-change-2017-03"><h2><span class="revision date">2017-03</span></h2>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added terminology entries for <span class="emphasis"><em>use case</em></span>,
-       <span class="emphasis"><em>business case</em></span>. </p></li><li class="listitem"><p> Improved guidance regarding use of prompts. </p></li><li class="listitem"><p> Added guidance regarding list structure. </p></li></ul></div>
-  </section><section class="revision" id="sec-change-2016-12"><h2><span class="revision date">2016-12</span></h2>
-   <p> Corrected SLES for SAP Applications product name. </p>
-  </section><section class="revision" id="sec-change-2016-07"><h2><span class="revision date">2016-07</span></h2>
-   <p> July 2016 Major Update Version 2016-07 was a major update focused on
-    adding terminology, fixing errors, and making the guide DocBook
-    5-compatible. Version 2014-02.2 was released on 2016-07-01. </p>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Migrated style guide from SVN to Git. Migrated style guide from
-      DocBook 4.3 to DocBook 5.1. Switched to using profiling instead of two
-       <code class="literal">MAIN</code> files for being able to customize contents based
-      on the DC file. Added <span class="emphasis"><em>Report Bug</em></span> link. </p></li><li class="listitem"><p> Updated style guide for use with DocBook 5.1 and GeekoDoc. </p></li><li class="listitem"><p> Improved clarity. Fixed typographical and grammar issues. Brought
-      Style Guide into better compliance with itself using the style checker.
-     </p></li><li class="listitem"><p> Updated legal notice reproduced in <a class="xref" href="sec-outline.html#sec-book" title="4.1. Books">Section 4.1, “Books”</a>.
-     </p></li><li class="listitem"><p> Added <a class="xref" href="sec-language.html#sec-quotation" title="6.15. Quotations">Section 6.15, “Quotations”</a>. </p></li><li class="listitem"><p> Added <a class="xref" href="sec-structure.html#sec-screen" title="7.4.6. Screens">Section 7.4.6, “Screens”</a>. Removed some now-duplicated
-      content out of <a class="xref" href="sec-structure.html#sec-example" title="7.7. Examples">Section 7.7, “Examples”</a>. </p></li><li class="listitem"><p> Corrected syntax of <a class="xref" href="sec-structure.html#ex-figure" title="Example of a figure">Example 7.9, “Example of a figure”</a>: <code class="sgmltag-emptytag">&lt;textobject/&gt;</code> must be within <code class="sgmltag-emptytag">&lt;mediaobject/&gt;</code>. </p></li><li class="listitem"><p> Updated terminology and general vocabulary tables in <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a>. </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added entries for <span class="emphasis"><em>AArch64</em></span>,
-         <span class="emphasis"><em>AMD64/Intel 64</em></span>, <span class="emphasis"><em>cursor</em></span>,
-         <span class="emphasis"><em>for instance</em></span>, <span class="emphasis"><em>IA64</em></span>,
-         <span class="emphasis"><em>kernel space</em></span>, <span class="emphasis"><em>KIWI</em></span>,
-         <span class="emphasis"><em>live CD</em></span>, <span class="emphasis"><em>live DVD</em></span>,
-         <span class="emphasis"><em>live image</em></span>, <span class="emphasis"><em>pointer</em></span>,
-         <span class="emphasis"><em>POWER</em></span>, <span class="emphasis"><em>Samba</em></span>, <span class="emphasis"><em>SUSE
-         Enterprise Storage</em></span>, <span class="emphasis"><em>SUSE Linux Enterprise Server
-         for SAP Applications</em></span>, <span class="emphasis"><em>systemd</em></span>,
-         <span class="emphasis"><em>System V init</em></span>, <span class="emphasis"><em>technology
-         preview</em></span>, <span class="emphasis"><em>toolchain</em></span>, <span class="emphasis"><em>user
-         space</em></span>, <span class="emphasis"><em>Web cam</em></span>,
-         <span class="emphasis"><em>x86</em></span>, <span class="emphasis"><em>z Systems</em></span>, words with
-         <span class="emphasis"><em>-ward</em></span> (such as <span class="emphasis"><em>afterward</em></span> or
-         <span class="emphasis"><em>backward</em></span>), </p></li><li class="listitem"><p> Changed accepted entry from <span class="emphasis"><em>SUSE Cloud</em></span> to
-         <span class="emphasis"><em>SUSE OpenStack Cloud</em></span>. Updated rejected entries.
-       </p></li><li class="listitem"><p> Improved definitions of <span class="emphasis"><em>click</em></span> and
-         <span class="emphasis"><em>press</em></span>. </p></li><li class="listitem"><p> Added <span class="emphasis"><em>mask</em></span> as a rejected entry to
-         <span class="emphasis"><em>dialog</em></span>. Added a definition for
-         <span class="emphasis"><em>dialog</em></span>. </p></li><li class="listitem"><p> Removed duplicate entry <span class="emphasis"><em>EPUB</em></span>. </p></li><li class="listitem"><p> Improved alphabetical sorting. </p></li></ul></div></li></ul></div>
-  </section><section class="revision" id="sec-change-2014-02-2"><h2><span class="revision date">2014-02</span></h2>
-   <p> Version 2014-02.2 was a minor update focused on adding terminology and
-    fixing small errors. Version 2014-02.2 was released on 2014-04-24. </p>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Improved clarity and fixed typos. </p></li><li class="listitem"><p> Brought Style Guide into better compliance with itself using the
-      style checker tool. </p></li><li class="listitem"><p> Moved <a class="xref" href="sec-language.html#sec-heading" title="6.9. Headings">Section 6.9, “Headings”</a> from <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a> into <a class="xref" href="sec-language.html" title="Chapter 6. Language">Chapter 6, <em>Language</em></a>. Added
-      new section <a class="xref" href="sec-structure.html#sec-outline-level" title="7.15. Outline levels and sectioning">Section 7.15, “Outline levels and sectioning”</a> with the information on
-      structure that the former <span class="emphasis"><em>Headings</em></span> section contained.
-     </p></li><li class="listitem"><p> Split existing section <span class="emphasis"><em>Abbreviations</em></span> into <a class="xref" href="sec-language.html#sec-latin" title="6.1.2. Latin abbreviations">Section 6.1.2, “Latin abbreviations”</a> and <a class="xref" href="sec-language.html#sec-measurement" title="6.1.3. Units of measurement">Section 6.1.3, “Units of measurement”</a>. Added
-       <a class="xref" href="sec-language.html#sec-latin" title="6.1.2. Latin abbreviations">Section 6.1.2, “Latin abbreviations”</a>,<a class="xref" href="sec-language.html#sec-measurement" title="6.1.3. Units of measurement">Section 6.1.3, “Units of measurement”</a>, and
-       <a class="xref" href="sec-language.html#sec-acronym" title="6.1.1. Acronyms">Section 6.1.1, “Acronyms”</a> to newly created <a class="xref" href="sec-language.html#sec-abbreviation" title="6.1. Abbreviations">Section 6.1, “Abbreviations”</a>. </p></li><li class="listitem"><p> Separated list items for <code class="sgmltag-attribute">id</code> attribute
-      and title in <a class="xref" href="sec-structure.html#sec-procedure" title="7.16. Procedures">Section 7.16, “Procedures”</a>. </p></li><li class="listitem"><p> Split the table in <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a> into <a class="xref" href="app-terminology.html#sec-terminology" title="A.1. Terminology">Section A.1, “Terminology”</a> and <a class="xref" href="app-terminology.html#sec-vocabulary" title="A.2. General vocabulary">Section A.2, “General vocabulary”</a> to
-      better reflect the roles of the terms listed there. </p></li><li class="listitem"><p> Updated terminology and general vocabulary tables in <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a>. </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added entries for <span class="emphasis"><em>adapter</em></span>,
-         <span class="emphasis"><em>architecture</em></span>, <span class="emphasis"><em>create a hard
-         link</em></span>, <span class="emphasis"><em>create a symbolic link</em></span>,
-         <span class="emphasis"><em>connect via SSH</em></span>, <span class="emphasis"><em>init script</em></span>,
-         <span class="emphasis"><em>installation medium</em></span>, <span class="emphasis"><em>log in via
-         SSH</em></span>, <span class="emphasis"><em>remove at runtime</em></span>,
-         <span class="emphasis"><em>solid-state drive</em></span>, <span class="emphasis"><em>SSD</em></span>,
-         <span class="emphasis"><em>symbolic link</em></span>,
-         <span class="emphasis"><em>synchronization</em></span>, <span class="emphasis"><em>synchronize</em></span>,
-         <span class="emphasis"><em>UEFI</em></span>, <span class="emphasis"><em>Unified Extensible Firmware
-         Interface</em></span>, <span class="emphasis"><em>virtualize</em></span>,
-         <span class="emphasis"><em>WLAN</em></span>, <span class="emphasis"><em>with regard to</em></span>. </p></li><li class="listitem"><p> Changed accepted spellings from <span class="emphasis"><em>Wi-fi</em></span> to
-         <span class="emphasis"><em>Wi-Fi</em></span>, <span class="emphasis"><em>Wi-fi card</em></span> to
-         <span class="emphasis"><em>Wi-Fi card</em></span>, and <span class="emphasis"><em>Wi-fi/Bluetooth
-         card</em></span> to <span class="emphasis"><em>Wi-Fi/Bluetooth card</em></span>. This
-        matches the correct spelling of the brand. 
-       </p></li><li class="listitem"><p> Corrected rejected terms in the entry of <span class="emphasis"><em>AOO</em></span>.
-       </p></li><li class="listitem"><p> Added rejected terms to the entries of <span class="emphasis"><em>boot
-         disk</em></span> (<span class="quote">“<span class="quote">boot disc</span>”</span>), <span class="emphasis"><em>check
-         box</em></span> (<span class="quote">“<span class="quote">checking option</span>”</span>), <span class="emphasis"><em>flash
-         disk</em></span>, <span class="emphasis"><em>hard disk</em></span>,
-         <span class="emphasis"><em>hotplug</em></span> (<span class="quote">“<span class="quote">hotadd</span>”</span>,
-         <span class="quote">“<span class="quote">hotswap</span>”</span>), <span class="emphasis"><em>hotpluggable</em></span>,
-         <span class="emphasis"><em>hotplugging</em></span>, <span class="emphasis"><em>press</em></span>,
-         <span class="emphasis"><em>slider</em></span> (<span class="quote">“<span class="quote">slidebar</span>”</span>). </p></li><li class="listitem"><p> Removed <span class="quote">“<span class="quote">installation media</span>”</span> from rejected terms of
-         <span class="emphasis"><em>installation source</em></span>. </p></li><li class="listitem"><p> Improved alphabetical sorting. </p></li></ul></div></li></ul></div>
-  </section><section class="revision" id="sec-change-2014-02-1"><h2><span class="revision date">2014-02</span></h2>
-   <p> Version 2014-02.1 was a minor update focused on adding terminology and
-    fixing small errors. Version 2014-02.1 was released on 2014-03-13. </p>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Improved clarity and fixed typos. </p></li><li class="listitem"><p> Improved example of a warning in <a class="xref" href="sec-structure.html#sec-admonition" title="7.1. Admonitory and advisory paragraphs">Section 7.1, “Admonitory and advisory paragraphs”</a>.
-     </p></li><li class="listitem"><p> Added an instruction where to insert screenshots to <a class="xref" href="sec-structure.html#sec-screenshot" title="7.10.2. Screenshots">Section 7.10.2, “Screenshots”</a>. 
-     </p></li><li class="listitem"><p> Updated terminology table in <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a>. </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Added entries for <span class="emphasis"><em>AOO</em></span>, <span class="emphasis"><em>Apache
-         OpenOffice</em></span>, <span class="emphasis"><em>Bluetooth</em></span>,
-         <span class="emphasis"><em>Bluetooth card</em></span>, <span class="emphasis"><em>drop-down
-        box</em></span>, <span class="emphasis"><em>Ethernet card</em></span>, <span class="emphasis"><em>HTML
-         page</em></span>, <span class="emphasis"><em>HTTPS</em></span>, <span class="emphasis"><em>KDE</em></span>,
-         <span class="emphasis"><em>LibreOffice</em></span>, <span class="emphasis"><em>Linux</em></span>,
-         <span class="emphasis"><em>list box</em></span>, <span class="emphasis"><em>menu</em></span>,
-         <span class="emphasis"><em>OpenOffice.org</em></span>, <span class="emphasis"><em>OOo</em></span>,
-         <span class="emphasis"><em>please</em></span>, <span class="emphasis"><em>delta RPM</em></span>,
-         <span class="emphasis"><em>(to) save sth.</em></span> (with sub-entries),
-         <span class="emphasis"><em>selected</em></span>, <span class="emphasis"><em>terminate</em></span>,
-         <span class="emphasis"><em>text box</em></span>, <span class="emphasis"><em>Wi-fi card</em></span>,
-         <span class="emphasis"><em>Wi-fi/Bluetooth card</em></span>, <span class="emphasis"><em>(to) write
-         sth.</em></span> and <span class="emphasis"><em>video DVD</em></span>. </p></li><li class="listitem"><p> Replaced entry for <span class="emphasis"><em>facilitate</em></span> with entry for
-         <span class="emphasis"><em>simplify</em></span>. </p></li><li class="listitem"><p> Added <span class="emphasis"><em>HTML web page</em></span> as a rejected entry to
-         <span class="emphasis"><em>Web page</em></span>. </p></li><li class="listitem"><p> Added <span class="emphasis"><em>joker</em></span> as a rejected entry to
-         <span class="emphasis"><em>wild card</em></span>. </p></li><li class="listitem"><p> Added <span class="emphasis"><em>screen</em></span> as a rejected entry to
-         <span class="emphasis"><em>dialog</em></span>. </p></li><li class="listitem"><p> Removed <span class="emphasis"><em>graphical UI</em></span> as a rejected entry from
-         <span class="emphasis"><em>GUI</em></span> and <span class="emphasis"><em>graphical user
-         interface</em></span>. </p></li><li class="listitem"><p> Clarified usage of <span class="emphasis"><em>(to) close sth.</em></span>,
-         <span class="emphasis"><em>(to) log in</em></span>, <span class="emphasis"><em>(to) log out</em></span>,
-        and <span class="emphasis"><em>(to) quit sth.</em></span>. </p></li><li class="listitem"><p> Changed accepted entry from <span class="emphasis"><em>Audio CD</em></span> to
-         <span class="emphasis"><em>audio CD</em></span>. </p></li><li class="listitem"><p> Removed entries for <span class="emphasis"><em>computer</em></span> and
-         <span class="emphasis"><em>Kernel</em></span>. </p></li></ul></div></li></ul></div>
-  </section><section class="revision" id="sec-change-2014-02"><h2><span class="revision date">2014-02</span></h2>
-   <p>February 2014 Major Update</p>
-   <p> 2014-02 was a major update focused on restructuring the style guide
-    and adding terminology. Version 2014-02 was released on 2014-02-18. </p>
-   <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Restructured large parts of the style guide </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Removed <span class="emphasis"><em>Creating a Consistent Structure: Lessons for
-         Lizards</em></span> section. </p></li><li class="listitem"><p> Renamed <span class="emphasis"><em>Creating a Consistent Structure: Official SUSE
-         Manuals</em></span> to <span class="emphasis"><em>Outline of a Manual</em></span> and
-        promoted to a <code class="sgmltag-emptytag">&lt;sect1/&gt;</code>. </p></li><li class="listitem"><p> Split the chapter <span class="emphasis"><em>Writing and Editing</em></span> into
-         <a class="xref" href="sec-language.html" title="Chapter 6. Language">Chapter 6, <em>Language</em></a>, <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a>, and
-         <a class="xref" href="sec-manage.html" title="Chapter 9. Managing documents">Chapter 9, <em>Managing documents</em></a>. Moved the subsections of
-         <span class="emphasis"><em>Writing and Editing</em></span> where they fit best. </p></li><li class="listitem"><p> Integrated the <span class="emphasis"><em>Markup</em></span> appendix into to <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a> and <a class="xref" href="sec-manage.html" title="Chapter 9. Managing documents">Chapter 9, <em>Managing documents</em></a>. </p></li><li class="listitem"><p> Moved <a class="xref" href="sec-structure.html#sec-procedure" title="7.16. Procedures">Section 7.16, “Procedures”</a> (formerly
-         <span class="emphasis"><em>Creating Procedures</em></span>) and <a class="xref" href="sec-structure.html#sec-command-line" title="7.4. Command-line input and command-line output">Section 7.4, “Command-line input and command-line output”</a> (formerly <span class="emphasis"><em>Presenting Computer
-         Elements</em></span>) as subsections into <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a>. </p></li><li class="listitem"><p> Renamed <span class="emphasis"><em>Discriminatory Language</em></span> to <a class="xref" href="sec-language.html#sec-bias" title="6.2. Biases and inclusiveness">Section 6.2, “Biases and inclusiveness”</a>. </p></li><li class="listitem"><p> Renamed <span class="emphasis"><em>Keys</em></span> to <a class="xref" href="sec-structure.html#sec-keyboard" title="7.14. Keys and key combinations">Section 7.14, “Keys and key combinations”</a> and promoted it to a <code class="sgmltag-emptytag">&lt;sect2/&gt;</code> within <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a>. </p></li><li class="listitem"><p> Renamed <span class="emphasis"><em>GUI Elements</em></span> to <a class="xref" href="sec-language.html#sec-ui-item-language" title="6.22. User interface items">Section 6.22, “User interface items”</a> and promoted it to a <code class="sgmltag-emptytag">&lt;sect2/&gt;</code> within <a class="xref" href="sec-language.html" title="Chapter 6. Language">Chapter 6, <em>Language</em></a>.
-       </p></li><li class="listitem"><p> Created <a class="xref" href="sec-manage.html" title="Chapter 9. Managing documents">Chapter 9, <em>Managing documents</em></a> and moved <a class="xref" href="sec-manage.html#sec-remark" title="9.1. Remarks">Section 9.1, “Remarks”</a>, <a class="xref" href="sec-manage.html#sec-xml-comment" title="9.2. XML comments">Section 9.2, “XML comments”</a>, and <a class="xref" href="sec-manage.html#sec-entity" title="9.3. Entities">Section 9.3, “Entities”</a> as subsections into it. </p></li><li class="listitem"><p> Moved <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a> and the copyright notice
-        into separate DocBook files. </p></li></ul></div></li><li class="listitem"><p> Restructured terminology list, added more terminology </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p> Renamed <span class="emphasis"><em>Spelling Terms</em></span> to <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a> and moved it into an appendix. </p></li><li class="listitem"><p> Centralized much of the information in the introductory paragraph
-        of <span class="emphasis"><em>Spelling Terms</em></span> in <a class="xref" href="sec-language.html" title="Chapter 6. Language">Chapter 6, <em>Language</em></a>. </p></li><li class="listitem"><p> Change table layout from two columns (<span class="quote">“<span class="quote">Word or
-         Phrase</span>”</span> and <span class="quote">“<span class="quote">Usage Guideline</span>”</span>) to three
-         (<span class="quote">“<span class="quote">Accepted</span>”</span>, <span class="quote">“<span class="quote">Rejected</span>”</span>, and <span class="quote">“<span class="quote">Usage
-         Guideline</span>”</span>). </p></li><li class="listitem"><p> Added prefix <span class="emphasis"><em>(to)</em></span> to all verbs. </p></li><li class="listitem"><p> Added grammatical classification of word to all entries. </p></li><li class="listitem"><p> Added entries for <span class="emphasis"><em>(to) activate sth.</em></span>,
-         <span class="emphasis"><em>add-on</em></span>, <span class="emphasis"><em>advice</em></span>,
-         <span class="emphasis"><em>(to) advise</em></span>, <span class="emphasis"><em>after</em></span>,
-         <span class="emphasis"><em>although</em></span>, <span class="emphasis"><em>and</em></span>,
-         <span class="emphasis"><em>appendixes</em></span>, <span class="emphasis"><em>Audio CD</em></span>,
-         <span class="emphasis"><em>because of</em></span>, <span class="emphasis"><em>basically</em></span>,
-         <span class="emphasis"><em>(to) boot using/via PXE</em></span>,
-         <span class="emphasis"><em>Btrfs</em></span>, <span class="emphasis"><em>but</em></span>,
-         <span class="emphasis"><em>CD</em></span>, <span class="emphasis"><em>CD-ROM</em></span>,
-         <span class="emphasis"><em>CUPS</em></span>, <span class="emphasis"><em>(to) close sth.</em></span>,
-         <span class="emphasis"><em>computer</em></span>*, <span class="emphasis"><em>configuration</em></span>,
-         <span class="emphasis"><em>(to) configure</em></span>, <span class="emphasis"><em>could</em></span>,
-         <span class="emphasis"><em>Common Unix Printing System</em></span>, <span class="emphasis"><em>(to)
-         deactivate sth.</em></span>, <span class="emphasis"><em>dialog</em></span>,
-         <span class="emphasis"><em>directory</em></span>, <span class="emphasis"><em>DVD</em></span>,
-         <span class="emphasis"><em>e-book</em></span>, <span class="emphasis"><em>EPUB</em></span>, <span class="emphasis"><em>easy,
-         easily</em></span>, <span class="emphasis"><em>end user</em></span>,
-         <span class="emphasis"><em>etc.</em></span>, <span class="emphasis"><em>Ext3</em></span>,
-         <span class="emphasis"><em>Ext4</em></span>, <span class="emphasis"><em>flavor</em></span>, <span class="emphasis"><em>flash
-         disk</em></span>*, <span class="emphasis"><em>graphical user interface</em></span>,
-         <span class="emphasis"><em>HTTP</em></span>, <span class="emphasis"><em>if</em></span>,
-         <span class="emphasis"><em>indexes</em></span>, <span class="emphasis"><em>initialization</em></span>,
-         <span class="emphasis"><em>(to) initialize</em></span>, <span class="emphasis"><em>IPv4</em></span>,
-         <span class="emphasis"><em>IPv6</em></span>, <span class="emphasis"><em>license</em></span>, <span class="emphasis"><em>(to)
-         license sth.</em></span>, <span class="emphasis"><em>lowercase</em></span>,
-         <span class="emphasis"><em>just</em></span>, <span class="emphasis"><em>need to</em></span>,
-         <span class="emphasis"><em>might</em></span>, <span class="emphasis"><em>(to) multitask</em></span>,
-         <span class="emphasis"><em>must</em></span>, <span class="emphasis"><em>obvious</em></span>,
-         <span class="emphasis"><em>obviously</em></span>, <span class="emphasis"><em>openSUSE</em></span>,
-         <span class="emphasis"><em>(to) open sth.</em></span>, <span class="emphasis"><em>open source</em></span>,
-         <span class="emphasis"><em>(to) print sth.</em></span>, <span class="emphasis"><em>(to) preconfigure
-         sth.</em></span>, <span class="emphasis"><em>preconfigured</em></span>, <span class="emphasis"><em>(to)
-         press sth.</em></span>, <span class="emphasis"><em>PXE</em></span>, <span class="emphasis"><em>PXE
-         boot</em></span>, <span class="emphasis"><em>(to) quit sth.</em></span>, <span class="emphasis"><em>(to)
-         register</em></span>, <span class="emphasis"><em>(to) register at sth.</em></span>,
-         <span class="emphasis"><em>(to) register for sth.</em></span>, <span class="emphasis"><em>SLE</em></span>,
-         <span class="emphasis"><em>SLED</em></span>, <span class="emphasis"><em>SLES</em></span>, <span class="emphasis"><em>SUSE
-         Cloud</em></span>, <span class="emphasis"><em>SUSE Linux Enterprise</em></span>,
-         <span class="emphasis"><em>SUSE Linux Enterprise Desktop</em></span>, <span class="emphasis"><em>SUSE
-         Linux Enterprise Server</em></span>, <span class="emphasis"><em>SUSE Manager</em></span>,
-         <span class="emphasis"><em>SUSE Studio</em></span>, <span class="emphasis"><em>self-evident</em></span>,
-         <span class="emphasis"><em>self-evidently</em></span>, <span class="emphasis"><em>scrollbar</em></span>*,
-         <span class="emphasis"><em>simple, simply</em></span>, <span class="emphasis"><em>(to) select
-         sth.</em></span>, <span class="emphasis"><em>(to) shut sth. down</em></span>,
-         <span class="emphasis"><em>shutdown</em></span>, <span class="emphasis"><em>(to) start sth. up</em></span>,
-         <span class="emphasis"><em>TAR archive</em></span>*, <span class="emphasis"><em>(to) type sth. (into
-         sth.)</em></span>, <span class="emphasis"><em>usage</em></span>,
-        <span class="emphasis"><em>Unix</em></span>, <span class="emphasis"><em>uppercase</em></span>,
-         <span class="emphasis"><em>when</em></span>, <span class="emphasis"><em>want sth.</em></span>,
-         <span class="emphasis"><em>Wi-fi</em></span>*, and <span class="emphasis"><em>YaST</em></span>. </p><p> (An * marks potentially interesting changes.) </p></li><li class="listitem"><p> Changed accepted spellings of compund words whose second part is
-         <span class="quote">“<span class="quote">name</span>”</span>. These are now written with a space: <span class="emphasis"><em>file
-         name</em></span>, <span class="emphasis"><em>host name</em></span>, <span class="emphasis"><em>path
-         name</em></span>, <span class="emphasis"><em>user name</em></span>. </p></li><li class="listitem"><p> Changed accepted spelling from <span class="emphasis"><em>screen shot</em></span> to
-         <span class="emphasis"><em>screenshot</em></span>. </p></li></ul></div></li><li class="listitem"><p> Switched from <em class="citetitle">Merriam-Webster Collegiate
-       Dictionary</em> to <a class="link" href="https://www.merriam-webster.com/" target="_blank">https://www.merriam-webster.com/</a> Web site as the
-      authoritative source of spellings. </p></li><li class="listitem"><p> Added <a class="xref" href="sec-structure.html#sec-prompt" title="7.4.5. Prompts">Section 7.4.5, “Prompts”</a> to document how to use prompts
-      in <code class="sgmltag-emptytag">&lt;screen/&gt;</code> elements. </p></li><li class="listitem"><p> In <a class="xref" href="sec-name.html" title="Chapter 3. Names of example items">Chapter 3, <em>Names of example items</em></a>, added Geeko, Foxkeh, Konqi, and Duke
-      to the list of mascots to choose from. </p></li><li class="listitem"><p> Removed all occurrences of <span class="quote">“<span class="quote">basically</span>”</span> and
-       <span class="quote">“<span class="quote">stuff</span>”</span>. Removed other occurrences of colloquial language.
-     </p></li><li class="listitem"><p> Updated various examples to use newer software versions or to not
-      specify a software version. (Examples are <span class="emphasis"><em>soffice</em></span> to
-       <span class="emphasis"><em>loffice</em></span>, <span class="emphasis"><em>SUSE LINUX 9.1.4.2</em></span> to
-       <span class="emphasis"><em>SUSE Linux Enterprise</em></span>). </p></li><li class="listitem"><p> Shortened and clarified many parts of the style guide to avoid
-      tautologies and unnecessary explanations. </p></li><li class="listitem"><p> Rewrote large parts of <a class="xref" href="sec-outline.html" title="Chapter 4. Outline of a manual">Chapter 4, <em>Outline of a manual</em></a>. Removed
-      example of structure. Added copyright notice as an example. Expanded on
-      information needed for title pages and imprints. </p></li><li class="listitem"><p> Removed differentiation between the many types of
-       <code class="filename">authors</code> files from <a class="xref" href="sec-outline.html" title="Chapter 4. Outline of a manual">Chapter 4, <em>Outline of a manual</em></a>.
-      This was too complicated to be practical. Also, current practice is to
-      never mention translators. </p></li><li class="listitem"><p> Added <span class="quote">“<span class="quote">Objective before Instruction</span>”</span> rule to <a class="xref" href="sec-language.html#sec-structure-sentence" title="6.17. Sentence structure">Section 6.17, “Sentence structure”</a>. </p></li><li class="listitem"><p> Added short guideline about file extensions to <a class="xref" href="sec-language.html#sec-file-language" title="6.8. File and directory names">Section 6.8, “File and directory names”</a>. </p></li><li class="listitem"><p> Reworked <a class="xref" href="sec-structure.html#sec-figure" title="7.10. Figures">Section 7.10, “Figures”</a> to be more structured and
-      added instructions for preparing and editing screenshots. </p></li><li class="listitem"><p> Added <a class="xref" href="sec-manage.html#sec-xinclude" title="9.4. XInclude elements">Section 9.4, “XInclude elements”</a>. </p></li><li class="listitem"><p> More informative example in <a class="xref" href="sec-structure.html#sec-glossary" title="7.11. Glossaries">Section 7.11, “Glossaries”</a>. </p></li><li class="listitem"><p> Simplified rules for creating IDs in <a class="xref" href="sec-structure.html#sec-id" title="7.12. Identifiers">Section 7.12, “Identifiers”</a>. The
-      aim is to shorten the length of the average ID and to help to create
-      predictable IDs. </p></li><li class="listitem"><p> Added the <code class="sgmltag-attvalue">co</code> prefix to <a class="xref" href="sec-structure.html#tab-id-prefix" title="Abbreviations for different elements in an xml:id attribute">Table 7.6, “Abbreviations for different elements in an
-    <code class="sgmltag-attribute">xml:id</code>
-    attribute”</a>. </p></li><li class="listitem"><p> Added this list of changes as an appendix. </p></li><li class="listitem"><p> Added list of authors as a separate DocBook file. </p></li><li class="listitem"><p> Added standard entities as a separate file. </p></li><li class="listitem"><p> Updated copyright notice to refer to SUSE, LLC instead of Novell,
-      Inc. </p></li></ul></div>
-  </section></div></body></html>
+</script></head><body onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="revhistory" id="rh-styleguide"><h1 class="title">Revision History: SUSE Documentation Style Guide</h1><section class="revision" id="sec-change-2024-07"><h2><span class="revision date">2024-07</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Added an instruction in the subsection <span class="quote">“<span class="quote">DocBook tags</span>”</span>
+            on when to use the <code class="sgmltag-emptytag">&lt;guimenu/&gt;</code> tag. It is
+            used to mark up all GUI elements like button, label and menu.
+          </p></li><li class="listitem"><p>
+            Updated the instruction in <span class="quote">“<span class="quote">Sentence structure</span>”</span> and
+            increased the word limit for a sentence to 25 words.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2024-05"><h2><span class="revision date">2024-05</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Updated the <span class="quote">“<span class="quote">Entities</span>”</span> subsection in <span class="quote">“<span class="quote">Managing
+            documents</span>”</span>: common types of entities and their use cases,
+            the Doc Kit repository that maintains official generic entities,
+            creating custom entities, and entity files.
+          </p></li><li class="listitem"><p>
+            Updated the <span class="quote">“<span class="quote">Prompts</span>”</span> subsection in <span class="quote">“<span class="quote">Structure
+            and markup</span>”</span> with clearer info on using prompts and prompt
+            entities (always specify regular or elevated privileges).
+          </p></li><li class="listitem"><p>
+            Terminology update: flash disk → flash drive, in sync with TermWeb.
+          </p></li><li class="listitem"><p>
+            <span class="quote">“<span class="quote">Language</span>”</span> and <span class="quote">“<span class="quote">Terminology</span>”</span> updated with
+            info about TermWeb that is now fully launched and available to all
+            SUSE employees.
+          </p></li><li class="listitem"><p>
+            The style guide changed its structure to the three-column layout
+            with clearly featured subsections.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2024-02"><h2><span class="revision date">2024-02</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Added a new section on Profiling to the <span class="quote">“<span class="quote">Structure and
+            markup</span>”</span> chapter.
+          </p></li><li class="listitem"><p>
+            Updated the introduction to <span class="quote">“<span class="quote">Structure and markup</span>”</span>
+            with links to doc-kit that now hosts examples of rendered books and
+            articles.
+          </p></li><li class="listitem"><p>
+            More in <span class="quote">“<span class="quote">Structure and markup</span>”</span>: links to READMEs in
+            doc-modular to find naming conventions for file and figure names,
+            and guidelines for using the <code class="sgmltag-emptytag">&lt;xrefstyle/&gt;</code>
+            attribute—only use the tags
+            <code class="sgmltag-emptytag">&lt;select:/&gt;</code> and
+            <code class="sgmltag-emptytag">&lt;template:/&gt;</code> with it to customize
+            cross-links.
+          </p></li><li class="listitem"><p>
+            Added clarified reference on using entities to create generic names
+            in the <span class="quote">“<span class="quote">Names of example items</span>”</span> chapter, with the link
+            to doc-kit.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2023-11"><h2><span class="revision date">2023-11</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Created a new <span class="quote">“<span class="quote">Revision history</span>”</span> that opens as a
+            separate file and is linked from the main doc. Added info about
+            this in the <span class="quote">“<span class="quote">Smart Docs</span>”</span> chapter: Use the
+            <code class="sgmltag-emptytag">&lt;revhistory/&gt;</code> tag in the
+            <code class="sgmltag-emptytag">&lt;info/&gt;</code> part of XML file.
+          </p></li><li class="listitem"><p>
+            Updated the rules for creating glossaries in section
+            <span class="quote">“<span class="quote">Glossaries,</span>”</span> which also contains an example of the
+            specific structure that must be used. A style sheet update now
+            supports the automatic alphabetical ordering of items.
+          </p></li><li class="listitem"><p>
+            Updated the <span class="quote">“<span class="quote">Structure and markup</span>”</span> chapter: Use the
+            <code class="sgmltag-emptytag">&lt;href/&gt;</code> element to provide
+            cross-references only within the same doc set; the tag
+            <code class="sgmltag-emptytag">&lt;citetitle/&gt;</code> is not translated and must
+            only reference names of printed books (section <span class="quote">“<span class="quote">DocBook tags,
+            Inline elements</span>”</span>).
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2023-09"><h2><span class="revision date">2023-09</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Updated the chapter on AsciiDoc: sorted the recommendations and
+            added the link to the guidance on AsciiDoc in Technical Reference
+            Documentation.
+          </p></li><li class="listitem"><p>
+            Updated the Language chapter with info on product names. If a
+            product name is not in the style guide's Terminology table or in
+            the entities Doc Kit file, refer to the official SUSE Products page
+            and the Marketing department. Do not use articles in front of
+            product names.
+          </p></li><li class="listitem"><p>
+            New items in the Terminology table: <span class="quote">“<span class="quote">since</span>”</span> rejected
+            in the meaning of <span class="quote">“<span class="quote">because</span>”</span>; <span class="quote">“<span class="quote">timeout</span>”</span>
+            and <span class="quote">“<span class="quote">system-wide</span>”</span> added as approved terms.
+            <span class="quote">“<span class="quote">Data</span>”</span> only requires singular, so <span class="quote">“<span class="quote">data
+            is</span>”</span> is approved and <span class="quote">“<span class="quote">data are</span>”</span> is rejected.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2023-06"><h2><span class="revision date">2023-06</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Added a new chapter on Smart Docs, describing the principle, the
+            structure and its building blocks.
+          </p></li><li class="listitem"><p>
+            Updated the recommended minimal title length with 29 characters for
+            SEO purposes.
+          </p></li><li class="listitem"><p>
+            Updated the <span class="quote">“<span class="quote">Inline elements</span>”</span> table in the
+            <span class="quote">“<span class="quote">DocBook Tags</span>”</span> chapter: added the guidance to use the
+            secure protocol prefix https:// and to use the package tag to
+            replace systemitem class="resource".
+          </p></li><li class="listitem"><p>
+            Added information on the use of the formalpara tag.
+          </p></li><li class="listitem"><p>
+            Added information about the element phrase
+            role="style:sentencecase" for the style sheets to expand the
+            relevant entities as uppercase, when needed.
+          </p></li><li class="listitem"><p>
+            Updated the Terminology table with <span class="quote">“<span class="quote">drop-down list</span>”</span>,
+            <span class="quote">“<span class="quote">list box</span>”</span> and <span class="quote">“<span class="quote">right-, left-, middle
+            click.</span>”</span>
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2023-02"><h2><span class="revision date">2023-02</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Finalized the file and image naming conventions and provided a
+            reference to the doc-modular repository in the <span class="quote">“<span class="quote">Structure and
+            Markup</span>”</span> chapter.
+          </p></li><li class="listitem"><p>
+            Added rules for quotation marks in chapter
+            <span class="quote">“<span class="quote">Language</span>”</span> only use them in quotes; in other
+            cases, use the <span class="emphasis"><em>emphasis</em></span> element to make words
+            or phrases more conspicuous.
+          </p></li><li class="listitem"><p>
+            Added the guidance to avoid using single quotation marks.
+          </p></li><li class="listitem"><p>
+            Updated the <span class="quote">“<span class="quote">Structure and Markup</span>”</span> chapter with the
+            instruction to not use articles before book and chapter titles when
+            referencing them.
+          </p></li><li class="listitem"><p>
+            Updated rules for the line length (100 char now) and indentation
+            (2-space characters now) in section <span class="quote">“<span class="quote">Formatting XML.</span>”</span>
+          </p></li><li class="listitem"><p>
+            Clarified the usage of the term <span class="quote">“<span class="quote">register to/with</span>”</span> in
+            <span class="quote">“<span class="quote">Terminology.</span>”</span>
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2022-11"><h2><span class="revision date">2022-11</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Added new content, updated and restructured the content of the
+            <span class="quote">“<span class="quote">Cross-references</span>”</span> section (a warning not to include
+            xref elements into titles).
+          </p></li><li class="listitem"><p>
+            Updated the <span class="quote">“<span class="quote">Screens</span>”</span> subsection with the info on
+            automatic syntax highlighting.
+          </p></li><li class="listitem"><p>
+            Expanded the rule of using the comma - no use of comma in simple
+            series like x, y and z.
+          </p></li><li class="listitem"><p>
+            Described how you can group different callouts to point to the same
+            annotation in the text (helps avoid repeating the same annotation).
+          </p></li><li class="listitem"><p>
+            Updated chapter <span class="quote">“<span class="quote">Language</span>”</span> with punctuation rules for
+            quotation marks - commas and periods go inside them per AE
+            punctuation rules.
+          </p></li><li class="listitem"><p>
+            Added terms: <span class="quote">“<span class="quote">unit,</span>”</span> <span class="quote">“<span class="quote">unit file,</span>”</span>
+            <span class="quote">“<span class="quote">console,</span>”</span> <span class="quote">“<span class="quote">shell,</span>”</span>
+            <span class="quote">“<span class="quote">terminal,</span>”</span> <span class="quote">“<span class="quote">init script,</span>”</span> and
+            <span class="quote">“<span class="quote">whitespace.</span>”</span>
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2022-08"><h2><span class="revision date">2022-08</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Added new content on the correct use of doc.suse.com URL in the
+            ‘External links to SUSE documentation’ subsection
+          </p></li><li class="listitem"><p>
+            Added general instructions on how to create and style tables in the
+            section ‘Structure and markup’
+          </p></li><li class="listitem"><p>
+            Added a subsection about hyphens to the ‘Language’ section
+          </p></li><li class="listitem"><p>
+            Added and updated terms and definitions: ‘bare metal’, ‘drop-down
+            list’, ‘list box’, ‘screen’, ‘usage’, ‘utilization’, ‘view’,
+            ‘multi-version’ (adjective)
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2022-06"><h2><span class="revision date">2022-06</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Added a section on localization-friendly writing in the 'Web
+            writing' chapter
+          </p></li><li class="listitem"><p>
+            Added a section on creating SP-independent links to the chapter
+            ‘Structure and markup’
+          </p></li><li class="listitem"><p>
+            Added definitions of program, application, script, command, tool,
+            form, dialog
+          </p></li><li class="listitem"><p>
+            Updated the 'DocBook tags' section of the style guide (fixed typos
+            and layout)
+          </p></li><li class="listitem"><p>
+            Added specification on the use of the % sign
+          </p></li><li class="listitem"><p>
+            Added admonition about version numbers in chapter titles
+          </p></li><li class="listitem"><p>
+            Rearranged sections in "Structure and markup chapter" in
+            alphabetical order
+          </p></li><li class="listitem"><p>
+            Added terms 'codestream', 'crash dump'
+          </p></li><li class="listitem"><p>
+            Updated guidance on punctuation to use at the end of list items
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2022-04"><h2><span class="revision date">2022-04</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Updated the Abstract instances in Style guide
+          </p></li><li class="listitem"><p>
+            Updated the chapter abstract wording and the example of an abstract
+            to match the char limit.
+          </p></li><li class="listitem"><p>
+            Added a section on Web writing and SEO-friendly content
+          </p></li><li class="listitem"><p>
+            Added a section on Tech writing to replace the Audience section
+          </p></li><li class="listitem"><p>
+            Added a section about DocBook tags allowlist
+          </p></li><li class="listitem"><p>
+            Added terms: 'changelog', 'real time', 'coldplug'
+          </p></li><li class="listitem"><p>
+            Minor bug fixes of the style guide
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2021-12"><h2><span class="revision date">2021-12</span></h2>
+      <p>
+        Updated recommendations for <code class="sgmltag-emptytag">&lt;abstracts/&gt;</code> and
+        <code class="sgmltag-emptytag">&lt;highlights/&gt;</code>: Always add an abstract to
+        chapters, with a length of 70 and 150 characters. Do not use
+        <code class="sgmltag-emptytag">&lt;highlights/&gt;</code>.
+      </p>
+    </section><section class="revision" id="sec-change-2021-10"><h2><span class="revision date">2021-10</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Updated recommended prompt style: Where possible, use short prompts
+            such as <code class="prompt user">&gt; </code> or
+            <code class="prompt root"># </code>.
+          </p></li><li class="listitem"><p>
+            Updated the definitions of <span class="emphasis"><em>installation medium</em></span>
+            and <span class="emphasis"><em>installation source</em></span> to clarify that
+            <span class="emphasis"><em>installation medium</em></span> should only be used where
+            a physical medium is concerned.
+          </p></li><li class="listitem"><p>
+            Added rules for when multiple commands can be combined within a
+            single <code class="sgmltag-emptytag">&lt;screen/&gt;</code> element.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2021-08"><h2><span class="revision date">2021-08</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Updated the spelling of <span class="emphasis"><em>lifecycle</em></span> (former
+            spelling, <span class="emphasis"><em>life cycle</em></span>).
+          </p></li><li class="listitem"><p>
+            Updated recommendations on how to list contributors. Change
+            <em class="citetitle">Contributors</em> appendix accordingly.
+          </p></li><li class="listitem"><p>
+            Mentioned that placeholders must not contain spaces.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2021-04"><h2><span class="revision date">2021-04</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Updated the standard title for sections comprising of references to
+            other documents from <span class="emphasis"><em>For more information</em></span> to
+            <span class="emphasis"><em>More information</em></span>.
+          </p></li><li class="listitem"><p>
+            Mentioned Doc Kit default entity file.
+          </p></li><li class="listitem"><p>
+            Added examples for hyphenation and file names/directory names.
+          </p></li><li class="listitem"><p>
+            Clarified/shortened/reformatted various language advice. Improved
+            wording consistency of references to other sections of the guide.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2021-02"><h2><span class="revision date">2021-02</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Mentioned that we support the Inclusive Naming Initiative.
+          </p></li><li class="listitem"><p>
+            Added section about rules for linking to external sites.
+          </p></li><li class="listitem"><p>
+            Added a section about avoiding promises of future features.
+          </p></li><li class="listitem"><p>
+            Mentioned that UI labels should always be capitalized as they are
+            capitalized in the UI.
+          </p></li><li class="listitem"><p>
+            Clarified section about abbreviations.
+          </p></li><li class="listitem"><p>
+            Improved structure of capitalization section.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2020-12"><h2><span class="revision date">2020-12</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Updated the Style Guide to recommend the use of sentence case for
+            titles. Book, article, and set titles are to remain in title case.
+          </p></li><li class="listitem"><p>
+            Added guideline when to use noun-based and when to use verb-based
+            headings.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2020-10"><h2><span class="revision date">2020-10</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Explained issues with URL shorteners.
+          </p></li><li class="listitem"><p>
+            Clarified section on creating IDs by removing confusing left-overs
+            from description of former <code class="literal">.</code>-based ID scheme.
+          </p></li><li class="listitem"><p>
+            Clarified and updated section about entities. Entities are not used
+            during translation.
+          </p></li><li class="listitem"><p>
+            Updated XInclude section. XIncluded documents can also be
+            plain-text.
+          </p></li><li class="listitem"><p>
+            Updated formatting of XML examples across the document to 1-space
+            indent, as is encouraged in the XML formatting section of this
+            document.
+          </p></li><li class="listitem"><p>
+            Removed Indexes section. There has not been a practical use of this
+            section in several years.
+          </p></li><li class="listitem"><p>
+            Updated advice on lists. Deduplicated the sections about lists in
+            the <em class="citetitle">Structure and Markup</em> section versus the
+            section in the <em class="citetitle">Language</em> section. Aligned
+            list terminology with DocBook terminology.
+          </p></li><li class="listitem"><p>
+            Improved phrasing and fixed minor language and technical errors
+            across the document.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2020-08"><h2><span class="revision date">2020-08</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Removed outdated and overly specific recommendation to use Shutter
+            application from section Screenshots.
+          </p></li><li class="listitem"><p>
+            Clarified section Outline. Included better guidance for article
+            outlines. Clarified when to contact product managers. Removed
+            outdated reference to SVN metadata.
+          </p></li><li class="listitem"><p>
+            Updated URLs of DocBook Definitive Guide. Updated URLs to HTTPS.
+          </p></li><li class="listitem"><p>
+            Moved advice to include at least introductory content in each
+            section from Language/Headings section to Structure/Outlining
+            section.
+          </p></li><li class="listitem"><p>
+            Clarified that admonition titles should use title style.
+          </p></li><li class="listitem"><p>
+            Removed listing of document authors.
+          </p></li><li class="listitem"><p>
+            Made language fixes, clarifications, and added explanations.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2019-11"><h2><span class="revision date">2019-11</span></h2>
+      <p>
+        Added guidance regarding appropriate on-page screenshot sizing.
+      </p>
+    </section><section class="revision" id="sec-change-2019-08"><h2><span class="revision date">2019-08</span></h2>
+      <p>
+        Added minimal guidance regarding AsciiDoc documents.
+      </p>
+    </section><section class="revision" id="sec-change-2019-07"><h2><span class="revision date">2019-07</span></h2>
+      <p>
+        Updated guidance regarding use of <code class="literal">.</code> and
+        <code class="literal">_</code> in XML IDs.
+      </p>
+    </section><section class="revision" id="sec-change-2019-03"><h2><span class="revision date">2019-03</span></h2>
+      <p>
+        Added guidance regarding easily outdated information in screens and
+        screenshots.
+      </p>
+    </section><section class="revision" id="sec-change-2018-11"><h2><span class="revision date">2018-11</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Added terminology entry for <span class="emphasis"><em>subsystem</em></span>.
+          </p></li><li class="listitem"><p>
+            Improved guidance regarding numbers and measurments.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2018-08"><h2><span class="revision date">2018-08</span></h2>
+      <p>
+        Improved guidance regarding path names.
+      </p>
+    </section><section class="revision" id="sec-change-2018-07"><h2><span class="revision date">2018-07</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Added guidance regarding XML formatting.
+          </p></li><li class="listitem"><p>
+            Improved guidance regarding commands.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2018-06"><h2><span class="revision date">2018-06</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Documented ID prefix for prefaces.
+          </p></li><li class="listitem"><p>
+            Added guidance regarding scaling of screenshots.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2018-04"><h2><span class="revision date">2018-04</span></h2>
+      <p>
+        Added terminology entry for <span class="emphasis"><em>namespace</em></span>.
+      </p>
+    </section><section class="revision" id="sec-change-2017-11"><h2><span class="revision date">2017-11</span></h2>
+      <p>
+        Improved guidance regarding XML IDs.
+      </p>
+    </section><section class="revision" id="sec-change-2017-10"><h2><span class="revision date">2017-10</span></h2>
+      <p>
+        Updated terminology entry for <span class="emphasis"><em>IBM Z</em></span>.
+      </p>
+    </section><section class="revision" id="sec-change-2017-04"><h2><span class="revision date">2017-04</span></h2>
+      <p>
+        Added terminology entries for <span class="emphasis"><em>e-mail</em></span>,
+        <span class="emphasis"><em>hot key</em></span>.
+      </p>
+    </section><section class="revision" id="sec-change-2017-03"><h2><span class="revision date">2017-03</span></h2>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Added terminology entries for <span class="emphasis"><em>use case</em></span>,
+            <span class="emphasis"><em>business case</em></span>.
+          </p></li><li class="listitem"><p>
+            Improved guidance regarding use of prompts.
+          </p></li><li class="listitem"><p>
+            Added guidance regarding list structure.
+          </p></li></ul></div>
+    </section><section class="revision" id="sec-change-2016-12"><h2><span class="revision date">2016-12</span></h2>
+      <p>
+        Corrected SLES for SAP Applications product name.
+      </p>
+    </section><section class="revision" id="sec-change-2016-07"><h2><span class="revision date">2016-07</span></h2>
+      <p>
+        July 2016 Major Update Version 2016-07 was a major update focused on
+        adding terminology, fixing errors, and making the guide DocBook
+        5-compatible. Version 2014-02.2 was released on 2016-07-01.
+      </p>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Migrated style guide from SVN to Git. Migrated style guide from
+            DocBook 4.3 to DocBook 5.1. Switched to using profiling instead of
+            two <code class="literal">MAIN</code> files for being able to customize
+            contents based on the DC file. Added <span class="emphasis"><em>Report
+            Bug</em></span> link.
+          </p></li><li class="listitem"><p>
+            Updated style guide for use with DocBook 5.1 and GeekoDoc.
+          </p></li><li class="listitem"><p>
+            Improved clarity. Fixed typographical and grammar issues. Brought
+            Style Guide into better compliance with itself using the style
+            checker.
+          </p></li><li class="listitem"><p>
+            Updated legal notice reproduced in <a class="xref" href="sec-outline.html#sec-book" title="4.1. Books">Section 4.1, “Books”</a>.
+          </p></li><li class="listitem"><p>
+            Added <a class="xref" href="sec-language.html#sec-quotation" title="6.15. Quotations">Section 6.15, “Quotations”</a>.
+          </p></li><li class="listitem"><p>
+            Added <a class="xref" href="sec-structure.html#sec-screen" title="7.4.6. Screens">Section 7.4.6, “Screens”</a>. Removed some now-duplicated
+            content out of <a class="xref" href="sec-structure.html#sec-example" title="7.7. Examples">Section 7.7, “Examples”</a>.
+          </p></li><li class="listitem"><p>
+            Corrected syntax of <a class="xref" href="sec-structure.html#ex-figure" title="Example of a figure">Example 7.9, “Example of a figure”</a>:
+            <code class="sgmltag-emptytag">&lt;textobject/&gt;</code> must be within
+            <code class="sgmltag-emptytag">&lt;mediaobject/&gt;</code>.
+          </p></li><li class="listitem"><p>
+            Updated terminology and general vocabulary tables in
+            <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a>.
+          </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+                Added entries for <span class="emphasis"><em>AArch64</em></span>,
+                <span class="emphasis"><em>AMD64/Intel 64</em></span>,
+                <span class="emphasis"><em>cursor</em></span>, <span class="emphasis"><em>for instance</em></span>,
+                <span class="emphasis"><em>IA64</em></span>, <span class="emphasis"><em>kernel space</em></span>,
+                <span class="emphasis"><em>KIWI</em></span>, <span class="emphasis"><em>live CD</em></span>,
+                <span class="emphasis"><em>live DVD</em></span>, <span class="emphasis"><em>live image</em></span>,
+                <span class="emphasis"><em>pointer</em></span>, <span class="emphasis"><em>POWER</em></span>,
+                <span class="emphasis"><em>Samba</em></span>, <span class="emphasis"><em>SUSE Enterprise
+                Storage</em></span>, <span class="emphasis"><em>SUSE Linux Enterprise Server for
+                SAP Applications</em></span>, <span class="emphasis"><em>systemd</em></span>,
+                <span class="emphasis"><em>System V init</em></span>, <span class="emphasis"><em>technology
+                preview</em></span>, <span class="emphasis"><em>toolchain</em></span>,
+                <span class="emphasis"><em>user space</em></span>, <span class="emphasis"><em>Web cam</em></span>,
+                <span class="emphasis"><em>x86</em></span>, <span class="emphasis"><em>z Systems</em></span>, words
+                with <span class="emphasis"><em>-ward</em></span> (such as
+                <span class="emphasis"><em>afterward</em></span> or
+                <span class="emphasis"><em>backward</em></span>),
+              </p></li><li class="listitem"><p>
+                Changed accepted entry from <span class="emphasis"><em>SUSE Cloud</em></span> to
+                <span class="emphasis"><em>SUSE OpenStack Cloud</em></span>. Updated rejected
+                entries.
+              </p></li><li class="listitem"><p>
+                Improved definitions of <span class="emphasis"><em>click</em></span> and
+                <span class="emphasis"><em>press</em></span>.
+              </p></li><li class="listitem"><p>
+                Added <span class="emphasis"><em>mask</em></span> as a rejected entry to
+                <span class="emphasis"><em>dialog</em></span>. Added a definition for
+                <span class="emphasis"><em>dialog</em></span>.
+              </p></li><li class="listitem"><p>
+                Removed duplicate entry <span class="emphasis"><em>EPUB</em></span>.
+              </p></li><li class="listitem"><p>
+                Improved alphabetical sorting.
+              </p></li></ul></div></li></ul></div>
+    </section><section class="revision" id="sec-change-2014-02-2"><h2><span class="revision date">2014-02</span></h2>
+      <p>
+        Version 2014-02.2 was a minor update focused on adding terminology and
+        fixing small errors. Version 2014-02.2 was released on 2014-04-24.
+      </p>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Improved clarity and fixed typos.
+          </p></li><li class="listitem"><p>
+            Brought Style Guide into better compliance with itself using the
+            style checker tool.
+          </p></li><li class="listitem"><p>
+            Moved <a class="xref" href="sec-language.html#sec-heading" title="6.9. Headings">Section 6.9, “Headings”</a> from
+            <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a> into
+            <a class="xref" href="sec-language.html" title="Chapter 6. Language">Chapter 6, <em>Language</em></a>. Added new section
+            <a class="xref" href="sec-structure.html#sec-outline-level" title="7.15. Outline levels and sectioning">Section 7.15, “Outline levels and sectioning”</a> with the information on
+            structure that the former <span class="emphasis"><em>Headings</em></span> section
+            contained.
+          </p></li><li class="listitem"><p>
+            Split existing section <span class="emphasis"><em>Abbreviations</em></span> into
+            <a class="xref" href="sec-language.html#sec-latin" title="6.1.2. Latin abbreviations">Section 6.1.2, “Latin abbreviations”</a> and
+            <a class="xref" href="sec-language.html#sec-measurement" title="6.1.3. Units of measurement">Section 6.1.3, “Units of measurement”</a>. Added
+            <a class="xref" href="sec-language.html#sec-latin" title="6.1.2. Latin abbreviations">Section 6.1.2, “Latin abbreviations”</a>,<a class="xref" href="sec-language.html#sec-measurement" title="6.1.3. Units of measurement">Section 6.1.3, “Units of measurement”</a>,
+            and <a class="xref" href="sec-language.html#sec-acronym" title="6.1.1. Acronyms">Section 6.1.1, “Acronyms”</a> to newly created
+            <a class="xref" href="sec-language.html#sec-abbreviation" title="6.1. Abbreviations">Section 6.1, “Abbreviations”</a>.
+          </p></li><li class="listitem"><p>
+            Separated list items for <code class="sgmltag-attribute">id</code> attribute
+            and title in <a class="xref" href="sec-structure.html#sec-procedure" title="7.16. Procedures">Section 7.16, “Procedures”</a>.
+          </p></li><li class="listitem"><p>
+            Split the table in <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a> into
+            <a class="xref" href="app-terminology.html#sec-terminology" title="A.1. Terminology">Section A.1, “Terminology”</a> and
+            <a class="xref" href="app-terminology.html#sec-vocabulary" title="A.2. General vocabulary">Section A.2, “General vocabulary”</a> to better reflect the roles of
+            the terms listed there.
+          </p></li><li class="listitem"><p>
+            Updated terminology and general vocabulary tables in
+            <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a>.
+          </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+                Added entries for <span class="emphasis"><em>adapter</em></span>,
+                <span class="emphasis"><em>architecture</em></span>, <span class="emphasis"><em>create a hard
+                link</em></span>, <span class="emphasis"><em>create a symbolic link</em></span>,
+                <span class="emphasis"><em>connect via SSH</em></span>, <span class="emphasis"><em>init
+                script</em></span>, <span class="emphasis"><em>installation medium</em></span>,
+                <span class="emphasis"><em>log in via SSH</em></span>, <span class="emphasis"><em>remove at
+                runtime</em></span>, <span class="emphasis"><em>solid-state drive</em></span>,
+                <span class="emphasis"><em>SSD</em></span>, <span class="emphasis"><em>symbolic link</em></span>,
+                <span class="emphasis"><em>synchronization</em></span>,
+                <span class="emphasis"><em>synchronize</em></span>, <span class="emphasis"><em>UEFI</em></span>,
+                <span class="emphasis"><em>Unified Extensible Firmware Interface</em></span>,
+                <span class="emphasis"><em>virtualize</em></span>, <span class="emphasis"><em>WLAN</em></span>,
+                <span class="emphasis"><em>with regard to</em></span>.
+              </p></li><li class="listitem"><p>
+                Changed accepted spellings from <span class="emphasis"><em>Wi-fi</em></span> to
+                <span class="emphasis"><em>Wi-Fi</em></span>, <span class="emphasis"><em>Wi-fi card</em></span> to
+                <span class="emphasis"><em>Wi-Fi card</em></span>, and <span class="emphasis"><em>Wi-fi/Bluetooth
+                card</em></span> to <span class="emphasis"><em>Wi-Fi/Bluetooth card</em></span>.
+                This matches the correct spelling of the brand.
+                
+              </p></li><li class="listitem"><p>
+                Corrected rejected terms in the entry of
+                <span class="emphasis"><em>AOO</em></span>.
+              </p></li><li class="listitem"><p>
+                Added rejected terms to the entries of <span class="emphasis"><em>boot
+                disk</em></span> (<span class="quote">“<span class="quote">boot disc</span>”</span>), <span class="emphasis"><em>check
+                box</em></span> (<span class="quote">“<span class="quote">checking option</span>”</span>),
+                <span class="emphasis"><em>flash disk</em></span>, <span class="emphasis"><em>hard
+                disk</em></span>, <span class="emphasis"><em>hotplug</em></span>
+                (<span class="quote">“<span class="quote">hotadd</span>”</span>, <span class="quote">“<span class="quote">hotswap</span>”</span>),
+                <span class="emphasis"><em>hotpluggable</em></span>,
+                <span class="emphasis"><em>hotplugging</em></span>, <span class="emphasis"><em>press</em></span>,
+                <span class="emphasis"><em>slider</em></span> (<span class="quote">“<span class="quote">slidebar</span>”</span>).
+              </p></li><li class="listitem"><p>
+                Removed <span class="quote">“<span class="quote">installation media</span>”</span> from rejected terms
+                of <span class="emphasis"><em>installation source</em></span>.
+              </p></li><li class="listitem"><p>
+                Improved alphabetical sorting.
+              </p></li></ul></div></li></ul></div>
+    </section><section class="revision" id="sec-change-2014-02-1"><h2><span class="revision date">2014-02</span></h2>
+      <p>
+        Version 2014-02.1 was a minor update focused on adding terminology and
+        fixing small errors. Version 2014-02.1 was released on 2014-03-13.
+      </p>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Improved clarity and fixed typos.
+          </p></li><li class="listitem"><p>
+            Improved example of a warning in <a class="xref" href="sec-structure.html#sec-admonition" title="7.1. Admonitory and advisory paragraphs">Section 7.1, “Admonitory and advisory paragraphs”</a>.
+          </p></li><li class="listitem"><p>
+            Added an instruction where to insert screenshots to
+            <a class="xref" href="sec-structure.html#sec-screenshot" title="7.10.2. Screenshots">Section 7.10.2, “Screenshots”</a>.
+            
+          </p></li><li class="listitem"><p>
+            Updated terminology table in <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a>.
+          </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+                Added entries for <span class="emphasis"><em>AOO</em></span>, <span class="emphasis"><em>Apache
+                OpenOffice</em></span>, <span class="emphasis"><em>Bluetooth</em></span>,
+                <span class="emphasis"><em>Bluetooth card</em></span>, <span class="emphasis"><em>drop-down
+                box</em></span>, <span class="emphasis"><em>Ethernet card</em></span>,
+                <span class="emphasis"><em>HTML page</em></span>, <span class="emphasis"><em>HTTPS</em></span>,
+                <span class="emphasis"><em>KDE</em></span>, <span class="emphasis"><em>LibreOffice</em></span>,
+                <span class="emphasis"><em>Linux</em></span>, <span class="emphasis"><em>list box</em></span>,
+                <span class="emphasis"><em>menu</em></span>, <span class="emphasis"><em>OpenOffice.org</em></span>,
+                <span class="emphasis"><em>OOo</em></span>, <span class="emphasis"><em>please</em></span>,
+                <span class="emphasis"><em>delta RPM</em></span>, <span class="emphasis"><em>(to) save
+                sth.</em></span> (with sub-entries),
+                <span class="emphasis"><em>selected</em></span>, <span class="emphasis"><em>terminate</em></span>,
+                <span class="emphasis"><em>text box</em></span>, <span class="emphasis"><em>Wi-fi card</em></span>,
+                <span class="emphasis"><em>Wi-fi/Bluetooth card</em></span>, <span class="emphasis"><em>(to) write
+                sth.</em></span> and <span class="emphasis"><em>video DVD</em></span>.
+              </p></li><li class="listitem"><p>
+                Replaced entry for <span class="emphasis"><em>facilitate</em></span> with entry
+                for <span class="emphasis"><em>simplify</em></span>.
+              </p></li><li class="listitem"><p>
+                Added <span class="emphasis"><em>HTML web page</em></span> as a rejected entry to
+                <span class="emphasis"><em>Web page</em></span>.
+              </p></li><li class="listitem"><p>
+                Added <span class="emphasis"><em>joker</em></span> as a rejected entry to
+                <span class="emphasis"><em>wild card</em></span>.
+              </p></li><li class="listitem"><p>
+                Added <span class="emphasis"><em>screen</em></span> as a rejected entry to
+                <span class="emphasis"><em>dialog</em></span>.
+              </p></li><li class="listitem"><p>
+                Removed <span class="emphasis"><em>graphical UI</em></span> as a rejected entry
+                from <span class="emphasis"><em>GUI</em></span> and <span class="emphasis"><em>graphical user
+                interface</em></span>.
+              </p></li><li class="listitem"><p>
+                Clarified usage of <span class="emphasis"><em>(to) close sth.</em></span>,
+                <span class="emphasis"><em>(to) log in</em></span>, <span class="emphasis"><em>(to) log
+                out</em></span>, and <span class="emphasis"><em>(to) quit sth.</em></span>.
+              </p></li><li class="listitem"><p>
+                Changed accepted entry from <span class="emphasis"><em>Audio CD</em></span> to
+                <span class="emphasis"><em>audio CD</em></span>.
+              </p></li><li class="listitem"><p>
+                Removed entries for <span class="emphasis"><em>computer</em></span> and
+                <span class="emphasis"><em>Kernel</em></span>.
+              </p></li></ul></div></li></ul></div>
+    </section><section class="revision" id="sec-change-2014-02"><h2><span class="revision date">2014-02</span></h2>
+      <p>
+        February 2014 Major Update
+      </p>
+      <p>
+        2014-02 was a major update focused on restructuring the style guide and
+        adding terminology. Version 2014-02 was released on 2014-02-18.
+      </p>
+      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Restructured large parts of the style guide
+          </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+                Removed <span class="emphasis"><em>Creating a Consistent Structure: Lessons for
+                Lizards</em></span> section.
+              </p></li><li class="listitem"><p>
+                Renamed <span class="emphasis"><em>Creating a Consistent Structure: Official
+                SUSE Manuals</em></span> to <span class="emphasis"><em>Outline of a
+                Manual</em></span> and promoted to a
+                <code class="sgmltag-emptytag">&lt;sect1/&gt;</code>.
+              </p></li><li class="listitem"><p>
+                Split the chapter <span class="emphasis"><em>Writing and Editing</em></span> into
+                <a class="xref" href="sec-language.html" title="Chapter 6. Language">Chapter 6, <em>Language</em></a>,
+                <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a>, and
+                <a class="xref" href="sec-manage.html" title="Chapter 9. Managing documents">Chapter 9, <em>Managing documents</em></a>. Moved the subsections of
+                <span class="emphasis"><em>Writing and Editing</em></span> where they fit best.
+              </p></li><li class="listitem"><p>
+                Integrated the <span class="emphasis"><em>Markup</em></span> appendix into to
+                <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a> and
+                <a class="xref" href="sec-manage.html" title="Chapter 9. Managing documents">Chapter 9, <em>Managing documents</em></a>.
+              </p></li><li class="listitem"><p>
+                Moved <a class="xref" href="sec-structure.html#sec-procedure" title="7.16. Procedures">Section 7.16, “Procedures”</a> (formerly
+                <span class="emphasis"><em>Creating Procedures</em></span>) and
+                <a class="xref" href="sec-structure.html#sec-command-line" title="7.4. Command-line input and command-line output">Section 7.4, “Command-line input and command-line output”</a> (formerly
+                <span class="emphasis"><em>Presenting Computer Elements</em></span>) as
+                subsections into <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a>.
+              </p></li><li class="listitem"><p>
+                Renamed <span class="emphasis"><em>Discriminatory Language</em></span> to
+                <a class="xref" href="sec-language.html#sec-bias" title="6.2. Biases and inclusiveness">Section 6.2, “Biases and inclusiveness”</a>.
+              </p></li><li class="listitem"><p>
+                Renamed <span class="emphasis"><em>Keys</em></span> to
+                <a class="xref" href="sec-structure.html#sec-keyboard" title="7.14. Keys and key combinations">Section 7.14, “Keys and key combinations”</a> and promoted it to a
+                <code class="sgmltag-emptytag">&lt;sect2/&gt;</code> within
+                <a class="xref" href="sec-structure.html" title="Chapter 7. Structure and markup">Chapter 7, <em>Structure and markup</em></a>.
+              </p></li><li class="listitem"><p>
+                Renamed <span class="emphasis"><em>GUI Elements</em></span> to
+                <a class="xref" href="sec-language.html#sec-ui-item-language" title="6.22. User interface items">Section 6.22, “User interface items”</a> and promoted
+                it to a <code class="sgmltag-emptytag">&lt;sect2/&gt;</code> within
+                <a class="xref" href="sec-language.html" title="Chapter 6. Language">Chapter 6, <em>Language</em></a>.
+              </p></li><li class="listitem"><p>
+                Created <a class="xref" href="sec-manage.html" title="Chapter 9. Managing documents">Chapter 9, <em>Managing documents</em></a> and moved
+                <a class="xref" href="sec-manage.html#sec-remark" title="9.1. Remarks">Section 9.1, “Remarks”</a>,
+                <a class="xref" href="sec-manage.html#sec-xml-comment" title="9.2. XML comments">Section 9.2, “XML comments”</a>, and
+                <a class="xref" href="sec-manage.html#sec-entity" title="9.3. Entities">Section 9.3, “Entities”</a> as subsections into it.
+              </p></li><li class="listitem"><p>
+                Moved <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a> and the copyright
+                notice into separate DocBook files.
+              </p></li></ul></div></li><li class="listitem"><p>
+            Restructured terminology list, added more terminology
+          </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+                Renamed <span class="emphasis"><em>Spelling Terms</em></span> to
+                <a class="xref" href="app-terminology.html" title="Appendix A. Terminology and general vocabulary">Appendix A, <em>Terminology and general vocabulary</em></a> and moved it into
+                an appendix.
+              </p></li><li class="listitem"><p>
+                Centralized much of the information in the introductory
+                paragraph of <span class="emphasis"><em>Spelling Terms</em></span> in
+                <a class="xref" href="sec-language.html" title="Chapter 6. Language">Chapter 6, <em>Language</em></a>.
+              </p></li><li class="listitem"><p>
+                Change table layout from two columns (<span class="quote">“<span class="quote">Word or
+                Phrase</span>”</span> and <span class="quote">“<span class="quote">Usage Guideline</span>”</span>) to three
+                (<span class="quote">“<span class="quote">Accepted</span>”</span>, <span class="quote">“<span class="quote">Rejected</span>”</span>, and
+                <span class="quote">“<span class="quote">Usage Guideline</span>”</span>).
+              </p></li><li class="listitem"><p>
+                Added prefix <span class="emphasis"><em>(to)</em></span> to all verbs.
+              </p></li><li class="listitem"><p>
+                Added grammatical classification of word to all entries.
+              </p></li><li class="listitem"><p>
+                Added entries for <span class="emphasis"><em>(to) activate sth.</em></span>,
+                <span class="emphasis"><em>add-on</em></span>, <span class="emphasis"><em>advice</em></span>,
+                <span class="emphasis"><em>(to) advise</em></span>, <span class="emphasis"><em>after</em></span>,
+                <span class="emphasis"><em>although</em></span>, <span class="emphasis"><em>and</em></span>,
+                <span class="emphasis"><em>appendixes</em></span>, <span class="emphasis"><em>Audio CD</em></span>,
+                <span class="emphasis"><em>because of</em></span>,
+                <span class="emphasis"><em>basically</em></span>, <span class="emphasis"><em>(to) boot using/via
+                PXE</em></span>, <span class="emphasis"><em>Btrfs</em></span>,
+                <span class="emphasis"><em>but</em></span>, <span class="emphasis"><em>CD</em></span>,
+                <span class="emphasis"><em>CD-ROM</em></span>, <span class="emphasis"><em>CUPS</em></span>,
+                <span class="emphasis"><em>(to) close sth.</em></span>,
+                <span class="emphasis"><em>computer</em></span>*,
+                <span class="emphasis"><em>configuration</em></span>, <span class="emphasis"><em>(to)
+                configure</em></span>, <span class="emphasis"><em>could</em></span>,
+                <span class="emphasis"><em>Common Unix Printing System</em></span>,
+                <span class="emphasis"><em>(to) deactivate sth.</em></span>,
+                <span class="emphasis"><em>dialog</em></span>, <span class="emphasis"><em>directory</em></span>,
+                <span class="emphasis"><em>DVD</em></span>, <span class="emphasis"><em>e-book</em></span>,
+                <span class="emphasis"><em>EPUB</em></span>, <span class="emphasis"><em>easy, easily</em></span>,
+                <span class="emphasis"><em>end user</em></span>, <span class="emphasis"><em>etc.</em></span>,
+                <span class="emphasis"><em>Ext3</em></span>, <span class="emphasis"><em>Ext4</em></span>,
+                <span class="emphasis"><em>flavor</em></span>, <span class="emphasis"><em>flash disk</em></span>*,
+                <span class="emphasis"><em>graphical user interface</em></span>,
+                <span class="emphasis"><em>HTTP</em></span>, <span class="emphasis"><em>if</em></span>,
+                <span class="emphasis"><em>indexes</em></span>,
+                <span class="emphasis"><em>initialization</em></span>, <span class="emphasis"><em>(to)
+                initialize</em></span>, <span class="emphasis"><em>IPv4</em></span>,
+                <span class="emphasis"><em>IPv6</em></span>, <span class="emphasis"><em>license</em></span>,
+                <span class="emphasis"><em>(to) license sth.</em></span>,
+                <span class="emphasis"><em>lowercase</em></span>, <span class="emphasis"><em>just</em></span>,
+                <span class="emphasis"><em>need to</em></span>, <span class="emphasis"><em>might</em></span>,
+                <span class="emphasis"><em>(to) multitask</em></span>, <span class="emphasis"><em>must</em></span>,
+                <span class="emphasis"><em>obvious</em></span>, <span class="emphasis"><em>obviously</em></span>,
+                <span class="emphasis"><em>openSUSE</em></span>, <span class="emphasis"><em>(to) open
+                sth.</em></span>, <span class="emphasis"><em>open source</em></span>,
+                <span class="emphasis"><em>(to) print sth.</em></span>, <span class="emphasis"><em>(to)
+                preconfigure sth.</em></span>,
+                <span class="emphasis"><em>preconfigured</em></span>, <span class="emphasis"><em>(to) press
+                sth.</em></span>, <span class="emphasis"><em>PXE</em></span>, <span class="emphasis"><em>PXE
+                boot</em></span>, <span class="emphasis"><em>(to) quit sth.</em></span>,
+                <span class="emphasis"><em>(to) register</em></span>, <span class="emphasis"><em>(to) register at
+                sth.</em></span>, <span class="emphasis"><em>(to) register for sth.</em></span>,
+                <span class="emphasis"><em>SLE</em></span>, <span class="emphasis"><em>SLED</em></span>,
+                <span class="emphasis"><em>SLES</em></span>, <span class="emphasis"><em>SUSE Cloud</em></span>,
+                <span class="emphasis"><em>SUSE Linux Enterprise</em></span>, <span class="emphasis"><em>SUSE
+                Linux Enterprise Desktop</em></span>, <span class="emphasis"><em>SUSE Linux
+                Enterprise Server</em></span>, <span class="emphasis"><em>SUSE
+                Manager</em></span>, <span class="emphasis"><em>SUSE Studio</em></span>,
+                <span class="emphasis"><em>self-evident</em></span>,
+                <span class="emphasis"><em>self-evidently</em></span>,
+                <span class="emphasis"><em>scrollbar</em></span>*, <span class="emphasis"><em>simple,
+                simply</em></span>, <span class="emphasis"><em>(to) select sth.</em></span>,
+                <span class="emphasis"><em>(to) shut sth. down</em></span>,
+                <span class="emphasis"><em>shutdown</em></span>, <span class="emphasis"><em>(to) start sth.
+                up</em></span>, <span class="emphasis"><em>TAR archive</em></span>*,
+                <span class="emphasis"><em>(to) type sth. (into sth.)</em></span>,
+                <span class="emphasis"><em>usage</em></span>, <span class="emphasis"><em>Unix</em></span>,
+                <span class="emphasis"><em>uppercase</em></span>, <span class="emphasis"><em>when</em></span>,
+                <span class="emphasis"><em>want sth.</em></span>, <span class="emphasis"><em>Wi-fi</em></span>*,
+                and <span class="emphasis"><em>YaST</em></span>.
+              </p><p>
+                (An * marks potentially interesting changes.)
+              </p></li><li class="listitem"><p>
+                Changed accepted spellings of compund words whose second part
+                is <span class="quote">“<span class="quote">name</span>”</span>. These are now written with a space:
+                <span class="emphasis"><em>file name</em></span>, <span class="emphasis"><em>host name</em></span>,
+                <span class="emphasis"><em>path name</em></span>, <span class="emphasis"><em>user name</em></span>.
+              </p></li><li class="listitem"><p>
+                Changed accepted spelling from <span class="emphasis"><em>screen shot</em></span>
+                to <span class="emphasis"><em>screenshot</em></span>.
+              </p></li></ul></div></li><li class="listitem"><p>
+            Switched from <em class="citetitle">Merriam-Webster Collegiate
+            Dictionary</em> to
+            <a class="link" href="https://www.merriam-webster.com/" target="_blank">https://www.merriam-webster.com/</a> Web
+            site as the authoritative source of spellings.
+          </p></li><li class="listitem"><p>
+            Added <a class="xref" href="sec-structure.html#sec-prompt" title="7.4.5. Prompts">Section 7.4.5, “Prompts”</a> to document how to use prompts
+            in <code class="sgmltag-emptytag">&lt;screen/&gt;</code> elements.
+          </p></li><li class="listitem"><p>
+            In <a class="xref" href="sec-name.html" title="Chapter 3. Names of example items">Chapter 3, <em>Names of example items</em></a>, added Geeko, Foxkeh, Konqi, and
+            Duke to the list of mascots to choose from.
+          </p></li><li class="listitem"><p>
+            Removed all occurrences of <span class="quote">“<span class="quote">basically</span>”</span> and
+            <span class="quote">“<span class="quote">stuff</span>”</span>. Removed other occurrences of colloquial
+            language.
+          </p></li><li class="listitem"><p>
+            Updated various examples to use newer software versions or to not
+            specify a software version. (Examples are
+            <span class="emphasis"><em>soffice</em></span> to <span class="emphasis"><em>loffice</em></span>,
+            <span class="emphasis"><em>SUSE LINUX 9.1.4.2</em></span> to <span class="emphasis"><em>SUSE Linux
+            Enterprise</em></span>).
+          </p></li><li class="listitem"><p>
+            Shortened and clarified many parts of the style guide to avoid
+            tautologies and unnecessary explanations.
+          </p></li><li class="listitem"><p>
+            Rewrote large parts of <a class="xref" href="sec-outline.html" title="Chapter 4. Outline of a manual">Chapter 4, <em>Outline of a manual</em></a>. Removed
+            example of structure. Added copyright notice as an example.
+            Expanded on information needed for title pages and imprints.
+          </p></li><li class="listitem"><p>
+            Removed differentiation between the many types of
+            <code class="filename">authors</code> files from
+            <a class="xref" href="sec-outline.html" title="Chapter 4. Outline of a manual">Chapter 4, <em>Outline of a manual</em></a>. This was too complicated to be
+            practical. Also, current practice is to never mention translators.
+          </p></li><li class="listitem"><p>
+            Added <span class="quote">“<span class="quote">Objective before Instruction</span>”</span> rule to
+            <a class="xref" href="sec-language.html#sec-structure-sentence" title="6.17. Sentence structure">Section 6.17, “Sentence structure”</a>.
+          </p></li><li class="listitem"><p>
+            Added short guideline about file extensions to
+            <a class="xref" href="sec-language.html#sec-file-language" title="6.8. File and directory names">Section 6.8, “File and directory names”</a>.
+          </p></li><li class="listitem"><p>
+            Reworked <a class="xref" href="sec-structure.html#sec-figure" title="7.10. Figures">Section 7.10, “Figures”</a> to be more structured and
+            added instructions for preparing and editing screenshots.
+          </p></li><li class="listitem"><p>
+            Added <a class="xref" href="sec-manage.html#sec-xinclude" title="9.4. XInclude elements">Section 9.4, “XInclude elements”</a>.
+          </p></li><li class="listitem"><p>
+            More informative example in <a class="xref" href="sec-structure.html#sec-glossary" title="7.11. Glossaries">Section 7.11, “Glossaries”</a>.
+          </p></li><li class="listitem"><p>
+            Simplified rules for creating IDs in <a class="xref" href="sec-structure.html#sec-id" title="7.12. Identifiers">Section 7.12, “Identifiers”</a>. The
+            aim is to shorten the length of the average ID and to help to
+            create predictable IDs.
+          </p></li><li class="listitem"><p>
+            Added the <code class="sgmltag-attvalue">co</code> prefix to
+            <a class="xref" href="sec-structure.html#tab-id-prefix" title="Abbreviations for different elements in an xml:id attribute">Table 7.6, “Abbreviations for different elements in an <code class="sgmltag-attribute">xml:id</code> attribute”</a>.
+          </p></li><li class="listitem"><p>
+            Added this list of changes as an appendix.
+          </p></li><li class="listitem"><p>
+            Added list of authors as a separate DocBook file.
+          </p></li><li class="listitem"><p>
+            Added standard entities as a separate file.
+          </p></li><li class="listitem"><p>
+            Updated copyright notice to refer to SUSE, LLC instead of Novell,
+            Inc.
+          </p></li></ul></div>
+    </section></div></body></html>
