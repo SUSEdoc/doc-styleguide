@@ -256,7 +256,7 @@ ultrashort description for social media, max. 55 chars&lt;/meta&gt;</pre></div>
 <div class="verbatim-wrap"><pre class="screen">&lt;merge&gt;
   &lt;title&gt;Your title, limit to 55 characters, if possible&lt;/title&gt;
   &lt;subtitle&gt;Subtitle if necessary&lt;/subtitle&gt;
-  &lt;revhistory xml:id="rh-USE_ROOTID"&gt;
+  &lt;revhistory xml:id="rh-USE-ROOTID"&gt;
     &lt;revision&gt;
       &lt;date&gt;2024-11-11&lt;/date&gt;
       &lt;revdescription&gt;
@@ -299,7 +299,7 @@ ultrashort description for social media, max. 55 chars&lt;/meta&gt;</pre></div>
     </p><p>
       Update revision history regularly, mentioning most important changes to
       your document when you amend or rework it. The data you enter as revision
-      history is used as meta data. The <span class="quote">“<span class="quote">Revision History</span>”</span> text is
+      history is used as metadata. The <span class="quote">“<span class="quote">Revision history</span>”</span> text is
       available as a link before the abstract and opens up in its individual
       page. Keep in mind the following rules:
     </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
@@ -309,7 +309,7 @@ ultrashort description for social media, max. 55 chars&lt;/meta&gt;</pre></div>
           Describe only significant changes that you performed.
         </p></li><li class="listitem"><p>
           If you have several changes of the same type (addition, change,
-          removal), group them under a dedicated
+          removal), you may group them under a dedicated
           <code class="sgmltag-emptytag">&lt;itemizedlist/&gt;</code>.
         </p></li><li class="listitem"><p>
           Do not add links or references with <code class="sgmltag-element">xref</code> of any kind. If
@@ -317,52 +317,21 @@ ultrashort description for social media, max. 55 chars&lt;/meta&gt;</pre></div>
           <a class="link" href="https://en.opensuse.org/openSUSE:Packaging_Patches_guidelines#Current_set_of_abbreviations" target="_blank">https://en.opensuse.org/openSUSE:Packaging_Patches_guidelines#Current_set_of_abbreviations</a>
           and wrap it inside the tag <code class="sgmltag-element">uri</code>.
         </p></li></ul></div><div class="example" id="ex-revhistory-source" data-id-title="Revision history example (source)"><div class="title-container"><div class="example-title-wrap"><div class="example-title"><span class="title-number-name"><span class="title-number">Example 12.1: </span><span class="title-name">Revision history example (source) </span></span><a title="Permalink" class="permalink" href="sec-smartdocs.html#ex-revhistory-source">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;revhistory xml:id="rh-USE-ROOTID"&gt;  
-  &lt;revision&gt;&lt;date&gt;2024-11-13&lt;/date&gt;
+  &lt;revision&gt;&lt;date&gt;YYYY-MM-DD&lt;/date&gt;
     &lt;revdescription&gt;  
-      &lt;itemizedlist&gt;
-        &lt;listitem&gt;&lt;para&gt;Added sections:&lt;/para&gt;
-          &lt;itemizedlist&gt;
-            &lt;listitem&gt;&lt;para&gt;New section on &lt;quote&gt;foo&lt;/quote&gt; to resolve issue &lt;uri&gt;bsc#12345&lt;/uri&gt;&lt;/para&gt;&lt;/listitem&gt;
-            &lt;listitem&gt;&lt;para&gt;New section on &lt;quote&gt;foo bar&lt;/quote&gt;&lt;/para&gt;&lt;/listitem&gt;
-          &lt;/itemizedlist&gt;
-        &lt;/listitem&gt;
-        &lt;listitem&gt;&lt;para&gt;Removed sections:&lt;/para&gt;
-          &lt;itemizedlist&gt;
-            &lt;listitem&gt;&lt;para&gt;Removed section on &lt;quote&gt;foo1&lt;/quote&gt; to resolve issue &lt;uri&gt;bsc#12346&lt;/uri&gt;&lt;/para&gt;&lt;/listitem&gt;
-            &lt;listitem&gt;&lt;para&gt;Removed section on &lt;quote&gt;foo1 bar&lt;/quote&gt;&lt;/para&gt;&lt;/listitem&gt;
-          &lt;/itemizedlist&gt;
-        &lt;/listitem&gt;
-        &lt;listitem&gt;&lt;para&gt;Changed sections:&lt;/para&gt;
-          &lt;itemizedlist&gt;
-            &lt;listitem&gt;&lt;para&gt;Changed section on &lt;quote&gt;foo2&lt;/quote&gt; to resolve issue &lt;uri&gt;bsc#12347&lt;/uri&gt;&lt;/para&gt;&lt;/listitem&gt;
-            &lt;listitem&gt;&lt;para&gt;Changed section on &lt;quote&gt;foo2 bar&lt;/quote&gt;&lt;/para&gt;&lt;/listitem&gt;
-          &lt;/itemizedlist&gt;
-        &lt;/listitem&gt;
-      &lt;/itemizedlist&gt;
+      &lt;para&gt;Updated CONTENT, extended CONTENT, removed CONTENT&lt;/para&gt;
+    &lt;/revdescription&gt;
+  &lt;/revision&gt;
+  &lt;revision&gt;&lt;date&gt;YYYY-MM-DD&lt;/date&gt;
+    &lt;revdescription&gt;  
+      &lt;para&gt;Updated for the initial release of &lt;phrase role="productname"&gt;SUSE Linux Enterprise Server&lt;/phrase&gt; 
+      &lt;phrase role="productnumber"&gt;15 SP6&lt;/phrase&gt;&lt;/para&gt;
     &lt;/revdescription&gt;
   &lt;/revision&gt;
 &lt;/revhistory&gt;</pre></div></div></div><div class="example" id="ex-revhistory-output" data-id-title="Revision history example (output)"><div class="title-container"><div class="example-title-wrap"><div class="example-title"><span class="title-number-name"><span class="title-number">Example 12.2: </span><span class="title-name">Revision history example (output) </span></span><a title="Permalink" class="permalink" href="sec-smartdocs.html#ex-revhistory-output">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div><div class="example-contents"><div class="revhistory" id="rh-USE-ROOTID"><table><tr><th style="text-align: left; vertical-align: top; " colspan="3"><strong>Revision History</strong></th></tr><tr><td style="text-align: left; "/><td style="text-align: left; ">2024-11-13</td><td style="text-align: left; "> </td></tr><tr><td style="text-align: left; " colspan="3">
-            <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
-                  Added sections:
-                </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
-                      New section on <span class="quote">“<span class="quote">foo</span>”</span> to resolve issue
-                      <code class="uri">bsc#12345</code>
-                    </p></li><li class="listitem"><p>
-                      New section on <span class="quote">“<span class="quote">foo bar</span>”</span>
-                    </p></li></ul></div></li><li class="listitem"><p>
-                  Removed sections:
-                </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
-                      Removed section on <span class="quote">“<span class="quote">foo1</span>”</span> to resolve issue
-                      <code class="uri">bsc#12346</code>
-                    </p></li><li class="listitem"><p>
-                      Removed section on <span class="quote">“<span class="quote">foo1 bar</span>”</span>
-                    </p></li></ul></div></li><li class="listitem"><p>
-                  Changed sections:
-                </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
-                      Changed section on <span class="quote">“<span class="quote">foo2</span>”</span> to resolve issue
-                      <code class="uri">bsc#12347</code>
-                    </p></li><li class="listitem"><p>
-                      Changed section on <span class="quote">“<span class="quote">foo2 bar</span>”</span>
-                    </p></li></ul></div></li></ul></div>
+            <p>Updated chapter on <span class="quote">“<span class="quote">foo bar</span>”</span>, removed section on <span class="quote">“<span class="quote">foo bar 1</span>”</span></p>
+          </td></tr><tr><td style="text-align: left; "/><td style="text-align: left; ">2024-09-21</td><td style="text-align: left; "> </td></tr><tr><td style="text-align: left; " colspan="3">
+            <p>Updated for the initial release of <span class="productname">SUSE Linux Enterprise Server</span>
+              <span class="productnumber">15 SP6</span></p>
           </td></tr></table></div></div></div></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="sec-asciidoc.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 11 </span>Working with AsciiDoc</span></a> </div><div><a class="pagination-link next" href="app-terminology.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Appendix A </span>Terminology and general vocabulary</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="sec-smartdocs.html#sec-taglist-smartdocs"><span class="title-number">12.1 </span><span class="title-name">Using ITS tags with assemblies</span></a></span></li><li><span class="section"><a href="sec-smartdocs.html#sec-revhistory"><span class="title-number">12.2 </span><span class="title-name">Revision history</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
                  2024</span></div></div></footer></body></html>
