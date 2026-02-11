@@ -16,10 +16,10 @@
 <meta name="twitter:title" content="SUSE Documentation Style Guide"/>
 <meta name="twitter:description" content="Writing, style and layout for SUSE documentation"/>
 <script type="application/ld+json">{
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": ["TechArticle"],
     "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
-    
+    "name": "Structure and markup",
      "isPartOf": {
       "@type": "CreativeWorkSeries",
       "name": "Products &amp; Solutions"
@@ -36,7 +36,7 @@
       {
         "@type": "Corporation",
         "name": "SUSE Product &amp; Solution Documentation Team",
-        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+        "url": "https://documentation.suse.com"
       }
     ],
       
@@ -163,9 +163,9 @@ default 0 <span class="callout" id="co-default">2</span></pre></div><div class="
         shortcuts.
       </p><p>
         For example, use:
-      </p><p>
+      </p><div class="verbatim-wrap"><pre class="screen">zypper --non-interactive install package-name</pre></div><p>
         instead of:
-      </p><p>
+      </p><div class="verbatim-wrap"><pre class="screen">zypper -n install package-name</pre></div><p>
         See also <a class="xref" href="sec-structure.html#sec-prompt" title="8.3.3. Prompts">Section 8.3.3, “Prompts”</a>.
       </p></section><section class="sect2" id="sec-file-markup" data-id-title="File names"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">8.3.2 </span><span class="title-name">File names</span></span> <a title="Permalink" class="permalink" href="sec-structure.html#sec-file-markup">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
         A file name is the name of a file on a local or network disk. Can contain a simple name or
@@ -197,16 +197,8 @@ in the directory `/etc/sysconfig`.</pre></div><p>
         documentation. Doc Kit repository contains entities for <span><em class="emphasis">user</em></span>,
         <span><em class="emphasis">root</em></span> and <span><em class="emphasis">sudo</em></span> prompts. For more information, see
         <a class="xref" href="sec-manage.html#sec-entity" title="9.1. Entities">Section 9.1, “Entities”</a>.
-      </p><div id="id-1.10.6.6.9" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><div class="admon-title">Tip</div><p>
-          Verbatim blocks normally do not expand attributes with their values. To use attributes
-          for prompts in a verbatim block, add <code class="literal">subs="+attributes"</code> in its header:
-        </p><div class="verbatim-wrap"><pre class="screen">[source,subs="+attributes"]
-----
-{prompt_root}zypper upgrade
-----</pre></div></div></section><section class="sect2" id="sec-screen" data-id-title="Verbatim blocks"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">8.3.4 </span><span class="title-name">Verbatim blocks</span></span> <a title="Permalink" class="permalink" href="sec-structure.html#sec-screen">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
-        Verbatim blocks
-        <span class="phrase">(<span class="quote">“<span class="quote">code
-        blocks</span>”</span>)</span> are used to present:
+      </p></section><section class="sect2" id="sec-screen" data-id-title="Verbatim blocks"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">8.3.4 </span><span class="title-name">Verbatim blocks</span></span> <a title="Permalink" class="permalink" href="sec-structure.html#sec-screen">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>
+        Verbatim blocks are used to present:
       </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
             long commands and commands together with their output
           </p></li><li class="listitem"><p>
@@ -215,11 +207,24 @@ in the directory `/etc/sysconfig`.</pre></div><p>
             code or configuration examples
           </p><div class="verbatim-wrap"><pre class="screen">[source]
 ----
-tux &amp;gt; ls /
+{prompt_user}ls /
 bin   dev   lib         mnt     proc  sbin     suse  usr
 boot  etc   lib64       mounts  root  selinux  sys   var
 data  home  lost+found  opt     run   srv      tmp
-----</pre></div></li><li class="listitem"><p>
+----</pre></div><div id="id-1.10.6.7.3.3.3" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><div class="admon-title">Tip</div><p>
+              Verbatim blocks normally do not expand attributes with their values. To use attributes
+              such as prompts in a verbatim block, add <code class="literal">subs="+attributes"</code> in its header.
+              This instruction expands <span><span class="emphasis"><strong>all</strong></span></span>
+              attributes within the verbatim block. To prevent specific
+              attributes from being expanded, backslash it as the
+              <code class="literal">\{VERSION}</code> below:
+            </p><div class="verbatim-wrap"><pre class="screen">[source,bash,subs="+attributes"]
+----
+{prompt_root}zypper install -y --auto-agree-with-licenses \
+  nv-prefer-signed-open-driver
+{prompt_root}version=$(rpm -qa --queryformat '%\{VERSION}\n' \
+  nv-prefer-signed-open-driver | cut -d "_" -f1 | sort -u | tail -n 1)
+----</pre></div></div></li><li class="listitem"><p>
             Use screens only where necessary for understanding the documentation. Present longer
             screens as examples. For more information, see <a class="xref" href="sec-structure.html#sec-example" title="8.6. Examples">Section 8.6, “Examples”</a>.
           </p></li><li class="listitem"><p>
@@ -984,5 +989,5 @@ There are less than 4 GB of space available on the selected partition.</pre></di
     </p><div class="example" id="ex-single-ui-item" data-id-title="Example of a single user interface item"><div class="title-container"><div class="example-title-wrap"><div class="example-title"><span class="title-number-name"><span class="title-number">Example 8.25: </span><span class="title-name">Example of a single user interface item </span></span><a title="Permalink" class="permalink" href="sec-structure.html#ex-single-ui-item">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">Press the btn:[OK] button to confirm your choice.</pre></div></div></div><p>
       To explain how to select a menu item, use the menu macro.
     </p><div class="example" id="ex-nested-ui-item" data-id-title="Example of nested user interface items"><div class="title-container"><div class="example-title-wrap"><div class="example-title"><span class="title-number-name"><span class="title-number">Example 8.26: </span><span class="title-name">Example of nested user interface items </span></span><a title="Permalink" class="permalink" href="sec-structure.html#ex-nested-ui-item">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">Save the file by selecting menu:File[Save].
-Select menu:View[Zoom &gt; Reset] to reset the zoom level to the default setting.</pre></div></div></div></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="sec-language.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 7 </span>Language</span></a> </div><div><a class="pagination-link next" href="sec-manage.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 9 </span>Managing documents</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="sec-structure.html#sec-admonition"><span class="title-number">8.1 </span><span class="title-name">Admonitory and advisory paragraphs</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-callout"><span class="title-number">8.2 </span><span class="title-name">Callouts</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-command-line"><span class="title-number">8.3 </span><span class="title-name">Command-line input and command-line output</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-cross-reference"><span class="title-number">8.4 </span><span class="title-name">Cross-references</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-emphasis"><span class="title-number">8.5 </span><span class="title-name">Emphasis</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-example"><span class="title-number">8.6 </span><span class="title-name">Examples</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-link"><span class="title-number">8.7 </span><span class="title-name">External links</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-link-to-susecom"><span class="title-number">8.8 </span><span class="title-name">External links to SUSE documentation</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-figure"><span class="title-number">8.9 </span><span class="title-name">Figures</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-glossary"><span class="title-number">8.10 </span><span class="title-name">Glossaries</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-id"><span class="title-number">8.11 </span><span class="title-name">Identifiers</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-list"><span class="title-number">8.12 </span><span class="title-name">Lists</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-keyboard"><span class="title-number">8.13 </span><span class="title-name">Keys and key combinations</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-outline-level"><span class="title-number">8.14 </span><span class="title-name">Outline levels and sectioning</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-procedure"><span class="title-number">8.15 </span><span class="title-name">Procedures</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-profiling"><span class="title-number">8.16 </span><span class="title-name">Profiling</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-question"><span class="title-number">8.17 </span><span class="title-name">Questions and answers</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-other-external"><span class="title-number">8.18 </span><span class="title-name">References to other external resources</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-revinfo"><span class="title-number">8.19 </span><span class="title-name">Revision information</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-table"><span class="title-number">8.20 </span><span class="title-name">Tables</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-ui-item-markup-adoc"><span class="title-number">8.21 </span><span class="title-name">User interface items</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE  2025</span></div></div></footer>
+Select menu:View[Zoom &gt; Reset] to reset the zoom level to the default setting.</pre></div></div></div></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="sec-language.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 7 </span>Language</span></a> </div><div><a class="pagination-link next" href="sec-manage.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 9 </span>Managing documents</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="sec-structure.html#sec-admonition"><span class="title-number">8.1 </span><span class="title-name">Admonitory and advisory paragraphs</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-callout"><span class="title-number">8.2 </span><span class="title-name">Callouts</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-command-line"><span class="title-number">8.3 </span><span class="title-name">Command-line input and command-line output</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-cross-reference"><span class="title-number">8.4 </span><span class="title-name">Cross-references</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-emphasis"><span class="title-number">8.5 </span><span class="title-name">Emphasis</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-example"><span class="title-number">8.6 </span><span class="title-name">Examples</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-link"><span class="title-number">8.7 </span><span class="title-name">External links</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-link-to-susecom"><span class="title-number">8.8 </span><span class="title-name">External links to SUSE documentation</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-figure"><span class="title-number">8.9 </span><span class="title-name">Figures</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-glossary"><span class="title-number">8.10 </span><span class="title-name">Glossaries</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-id"><span class="title-number">8.11 </span><span class="title-name">Identifiers</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-list"><span class="title-number">8.12 </span><span class="title-name">Lists</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-keyboard"><span class="title-number">8.13 </span><span class="title-name">Keys and key combinations</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-outline-level"><span class="title-number">8.14 </span><span class="title-name">Outline levels and sectioning</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-procedure"><span class="title-number">8.15 </span><span class="title-name">Procedures</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-profiling"><span class="title-number">8.16 </span><span class="title-name">Profiling</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-question"><span class="title-number">8.17 </span><span class="title-name">Questions and answers</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-other-external"><span class="title-number">8.18 </span><span class="title-name">References to other external resources</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-revinfo"><span class="title-number">8.19 </span><span class="title-name">Revision information</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-table"><span class="title-number">8.20 </span><span class="title-name">Tables</span></a></span></li><li><span class="section"><a href="sec-structure.html#sec-ui-item-markup-adoc"><span class="title-number">8.21 </span><span class="title-name">User interface items</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE  2026</span></div></div></footer>
 <script type="text/javascript" src="static/js/language-switcher.js"> </script></body></html>
